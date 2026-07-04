@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omme Kalsoom | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1930;
+    --navy-light: #10233f;
+    --navy-lighter: #16304f;
+    --gold: #d4af37;
+    --gold-light: #f1d989;
+    --text-light: #e8ecf3;
+    --text-muted: #a9b6cc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+  a { text-decoration: none; color: inherit; }
+
+  ::selection { background: var(--gold); color: var(--navy); }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--navy); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+
+  /* Navbar */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(10, 25, 48, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s;
+  }
+
+  nav a:hover { color: var(--gold); }
+  nav a:hover::after { width: 100%; }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .menu-toggle span {
+    width: 26px;
+    height: 2px;
+    background: var(--gold);
+    transition: 0.3s;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 6%;
+    position: relative;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(212,175,55,0.08) 0%, transparent 45%),
+      radial-gradient(circle at 80% 80%, rgba(212,175,55,0.06) 0%, transparent 45%),
+      var(--navy);
+  }
+
+  .hero-tag {
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.15s forwards;
+  }
+
+  .hero h1 span { color: var(--gold); }
+
+  .hero p {
+    max-width: 600px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.3s forwards;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.45s forwards;
+  }
+
+  .btn {
+    padding: 14px 34px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid var(--gold);
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--gold);
+    transform: translateY(-3px);
+  }
+
+  .btn-outline {
+    color: var(--gold);
+    background: transparent;
+  }
+
+  .btn-outline:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-3px);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 40px;
+    width: 24px;
+    height: 40px;
+    border: 2px solid var(--gold);
+    border-radius: 14px;
+  }
+
+  .scroll-cue::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 2px;
+    animation: scrollDot 1.6s infinite;
+  }
+
+  @keyframes scrollDot {
+    0% { opacity: 1; top: 6px; }
+    100% { opacity: 0; top: 20px; }
+  }
+
+  /* Section shared styles */
+  section {
+    padding: 120px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 70px;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: var(--gold);
+    margin: 18px auto 0;
+  }
+
+  /* About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    background: linear-gradient(145deg, var(--navy-light), var(--navy-lighter));
+    border: 2px solid rgba(212,175,55,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-photo::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(212,175,55,0.4);
+    border-radius: 6px;
+  }
+
+  .about-text p {
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .stat {
+    text-align: center;
+    padding: 20px 10px;
+    background: var(--navy-light);
+    border-radius: 8px;
+    border: 1px solid rgba(212,175,55,0.15);
+  }
+
+  .stat h3 {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+  }
+
+  .stat span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+  }
+
+  .skill-card {
+    background: var(--navy-light);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: 10px;
+    padding: 34px 26px;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212,175,55,0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  }
+
+  .skill-card:hover::before { transform: scaleX(1); }
+
+  .skill-icon {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    color: var(--gold);
+  }
+
+  .skill-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: var(--text-light);
+  }
+
+  .skill-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 3px;
+    width: 0;
+    transition: width 1.2s ease;
+  }
+
+  /* Contact */
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+  }
+
+  .contact-info-card {
+    background: var(--navy-light);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: 10px;
+    padding: 40px 32px;
+  }
+
+  .contact-info-card h3 {
+    color: var(--gold);
+    margin-bottom: 24px;
+    font-size: 1.4rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .contact-item .icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+
+  .contact-item div h4 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  .contact-item div a, .contact-item div span {
+    font-size: 1rem;
+    color: var(--text-light);
+    word-break: break-word;
+  }
+
+  .contact-item div a:hover { color: var(--gold); }
+
+  .social-links {
+    display: flex;
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  .social-links a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(212,175,55,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    transition: all 0.3s;
+    font-size: 0.95rem;
+  }
+
+  .social-links a:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-3px);
+  }
+
+  form {
+    background: var(--navy-light);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: 10px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  input, textarea {
+    background: var(--navy);
+    border: 1px solid rgba(212,175,55,0.2);
+    border-radius: 6px;
+    padding: 14px 16px;
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+  }
+
+  input:focus, textarea:focus { border-color: var(--gold); }
+
+  textarea { resize: vertical; min-height: 130px; }
+
+  form .btn { border: 2px solid var(--gold); background: var(--gold); color: var(--navy); cursor: pointer; font-family: inherit; }
+  form .btn:hover { background: transparent; color: var(--gold); }
+
+  .form-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 30px 8%;
+    border-top: 1px solid rgba(212,175,55,0.15);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  footer span { color: var(--gold); }
+
+  /* Reveal animation on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive */
+  @media (max-width: 850px) {
+    .about-grid, .contact-wrap { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    nav { position: fixed; top: 0; right: -100%; height: 100vh; width: 260px; background: var(--navy-light); flex-direction: column; padding: 100px 40px; transition: right 0.4s ease; box-shadow: -10px 0 30px rgba(0,0,0,0.4); }
+    nav.open { right: 0; }
+    nav ul { flex-direction: column; gap: 30px; }
+    .menu-toggle { display: flex; }
+    section { padding: 90px 6%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#home" class="logo">O.K</a>
+  <nav id="navMenu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-toggle" id="menuToggle">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <span class="hero-tag">Welcome to my portfolio</span>
+  <h1>OMME <span>KALSOOM</span></h1>
+  <p>Freelance Developer &amp; Digital Problem Solver — I design and build clean, modern, results-driven web experiences.</p>
+  <div class="hero-buttons">
+    <a href="#contact" class="btn btn-primary">Hire Me</a>
+    <a href="#skills" class="btn btn-outline">View Skills</a>
+  </div>
+  <div class="scroll-cue"></div>
+</section>
+
+<section id="about">
+  <span class="section-tag">Get To Know Me</span>
+  <h2 class="section-title reveal">About Me</h2>
+  <div class="about-grid">
+    <div class="about-photo reveal">OK</div>
+    <div class="about-text reveal">
+      <p>I'm Omme Kalsoom, a passionate freelance developer dedicated to crafting elegant, functional, and modern digital experiences. I enjoy turning ideas into polished products, blending clean design with reliable, efficient code.</p>
+      <p>I focus on writing maintainable code, delivering pixel-perfect interfaces, and communicating clearly with every client to bring their vision to life — on time and on budget.</p>
+      <div class="about-stats">
+        <div class="stat"><h3>10+</h3><span>Projects Done</span></div>
+        <div class="stat"><h3>3+</h3><span>Years Experience</span></div>
+        <div class="stat"><h3>100%</h3><span>Client Focus</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <span class="section-tag">What I Do</span>
+  <h2 class="section-title reveal">My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-icon">&#10022;</div>
+      <h3>HTML &amp; CSS</h3>
+      <p>Building responsive, accessible, and pixel-perfect layouts for any screen.</p>
+      <div class="bar"><div class="bar-fill" data-width="95"></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">&#10022;</div>
+      <h3>JavaScript</h3>
+      <p>Creating interactive, dynamic experiences with clean, modern JS.</p>
+      <div class="bar"><div class="bar-fill" data-width="90"></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">&#10022;</div>
+      <h3>UI / UX Design</h3>
+      <p>Designing intuitive interfaces with a strong eye for detail and aesthetics.</p>
+      <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">&#10022;</div>
+      <h3>Web Development</h3>
+      <p>End-to-end development of fast, scalable, and modern websites.</p>
+      <div class="bar"><div class="bar-fill" data-width="92"></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">&#10022;</div>
+      <h3>Responsive Design</h3>
+      <p>Ensuring every project looks flawless on mobile, tablet, and desktop.</p>
+      <div class="bar"><div class="bar-fill" data-width="94"></div></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">&#10022;</div>
+      <h3>Problem Solving</h3>
+      <p>Approaching every challenge with logic, creativity, and attention to detail.</p>
+      <div class="bar"><div class="bar-fill" data-width="90"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <span class="section-tag">Get In Touch</span>
+  <h2 class="section-title reveal">Contact Me</h2>
+  <div class="contact-wrap">
+    <div class="contact-info-card reveal">
+      <h3>Let's Talk</h3>
+      <div class="contact-item">
+        <div class="icon">&#9993;</div>
+        <div>
+          <h4>Email</h4>
+          <a href="mailto:ommefreelancer@gmail.com">ommefreelancer@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">&#9742;</div>
+        <div>
+          <h4>Phone</h4>
+          <span>+92 XXX XXXXXXX</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">&#9679;</div>
+        <div>
+          <h4>Location</h4>
+          <span>Available Worldwide (Remote)</span>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="GitHub">gh</a>
+        <a href="#" title="Twitter">tw</a>
+      </div>
+    </div>
+    <form action="mailto:ommefreelancer@gmail.com" method="post" enctype="text/plain">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <span class="form-note">This form opens your default email app to send the message directly.</span>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> <span>Omme Kalsoom</span>. All rights reserved.</p>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navMenu.classList.remove('open'));
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        if (entry.target.classList.contains('skill-card')) {
+          const fill = entry.target.querySelector('.bar-fill');
+          if (fill) fill.style.width = fill.dataset.width + '%';
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Header background on scroll
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    header.style.boxShadow = window.scrollY > 40 ? '0 4px 20px rgba(0,0,0,0.3)' : 'none';
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
