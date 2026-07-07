@@ -1,0 +1,264 @@
+<!--
+  BLOG POST TEMPLATE — not linked from navigation, footer, or sitemap.xml.
+  This file is a starting point, not a published page.
+
+  To publish a real post:
+    1. Duplicate this file and rename it to your post's slug, e.g. technical-seo-checklist.html
+    2. Replace every block marked <!-- REPLACE: ... --> below
+    3. Add one entry for this post to blogPosts in ../assets/js/blog-posts-data.js
+    4. Add the new page's URL to ../sitemap.xml
+  Full instructions: blog/HOW-TO-PUBLISH.md
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- REPLACE: page title -->
+<title>Your Post Title | Ascent Digital Blog</title>
+<!-- REPLACE: meta description, 150-160 characters, written for humans, not stuffed with keywords -->
+<meta name="description" content="A one to two sentence summary of what this post covers and why it's useful.">
+<!-- REPLACE: canonical/og/twitter URLs to match the real published URL of this post -->
+<link rel="canonical" href="https://example.com/blog/your-post-slug.html">
+<meta property="og:title" content="Your Post Title | Ascent Digital Blog">
+<meta property="og:description" content="A one to two sentence summary of what this post covers and why it's useful.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://example.com/blog/your-post-slug.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your Post Title | Ascent Digital Blog">
+<meta name="twitter:description" content="A one to two sentence summary of what this post covers and why it's useful.">
+<meta name="theme-color" content="#2563EB">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<!-- REPLACE: fill in the Article + BreadcrumbList schema to match this post -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Your Post Title",
+      "description": "A one to two sentence summary of what this post covers and why it's useful.",
+      "author": { "@type": "Person", "name": "Omme Kalsoom" },
+      "publisher": { "@id": "https://example.com/#organization" },
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-01-01",
+      "mainEntityOfPage": "https://example.com/blog/your-post-slug.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://example.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Your Post Title", "item": "https://example.com/blog/your-post-slug.html" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+  <a href="../index.html" class="logo">
+    <span class="logo-main">ASCENT <span>DIGITAL</span></span>
+    <span class="logo-sub">Founded by Omme Kalsoom</span>
+  </a>
+  <nav id="navMenu" aria-label="Primary">
+    <ul>
+      <li><a href="../index.html#home">Home</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#services">Services</a></li>
+      <li><a href="../index.html#why">Why Us</a></li>
+      <li><a href="../index.html#tools">Tools</a></li>
+      <li><a href="../index.html#projects">Portfolio</a></li>
+      <li><a href="../index.html#faq">FAQ</a></li>
+      <li><a href="index.html" aria-current="page">Blog</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="main-content">
+
+<!-- REPLACE: update the breadcrumb's post name -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="../index.html">Home</a> / <a href="index.html">Blog</a> / <span aria-current="page">Your Post Title</span>
+</nav>
+
+<section class="prose" style="padding-top: 30px;">
+  <div class="template-note">
+    This is the unpublished post template. Delete this note before publishing. See <code>blog/HOW-TO-PUBLISH.md</code> for the full checklist.
+  </div>
+
+  <div class="post-meta-row">
+    <!-- REPLACE: category, date, read time -->
+    <span class="post-category">Category</span>
+    <span>January 1, 2026</span>
+    <span>6 min read</span>
+  </div>
+
+  <!-- REPLACE: post title (must match <title> above) -->
+  <h1>Your Post Title</h1>
+
+  <!-- REPLACE: everything below with your actual article content.
+       Use one <h1> only (above). Use <h2>/<h3> for subheadings,
+       keep paragraphs short, and write for the person reading it,
+       not for a keyword count. -->
+  <p>Opening paragraph goes here. Say plainly what this post covers and who it's for.</p>
+
+  <h2>First subheading</h2>
+  <p>Body content goes here.</p>
+
+  <h2>Second subheading</h2>
+  <p>Body content goes here.</p>
+  <ul>
+    <li>Example list item</li>
+    <li>Example list item</li>
+  </ul>
+
+  <h2>Closing thoughts</h2>
+  <p>Wrap up with a clear takeaway, and link to a relevant service or the contact section where it naturally fits.</p>
+
+  <div class="author-box">
+    <div class="avatar">OK</div>
+    <div>
+      <h4>Omme Kalsoom</h4>
+      <p>Founder of Ascent Digital. <a href="../index.html#about">Read more about Omme &rarr;</a></p>
+    </div>
+  </div>
+
+  <div class="share-row" id="shareRow">
+    <span>Share:</span>
+    <!-- REPLACE: these share links pull the current page URL/title automatically via the script below, no manual editing needed -->
+    <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" title="Share on X" aria-label="Share on X">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.6l-5.2-6.8L5.2 22H2l8.1-9.3L1.5 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.7L7.4 4H5.6l12.1 16Z"/></svg>
+    </a>
+    <a id="shareLinkedIn" href="#" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3.2 8.75h3.5V21H3.2V8.75Zm6.2 0h3.35v1.68h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.28 4.18 5.24V21h-3.5v-5.68c0-1.35-.02-3.1-1.9-3.1-1.9 0-2.19 1.47-2.19 3v5.78H9.4V8.75Z"/></svg>
+    </a>
+    <a id="shareFacebook" href="#" target="_blank" rel="noopener noreferrer" title="Share on Facebook" aria-label="Share on Facebook">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
+    </a>
+    <a id="shareWhatsApp" href="#" target="_blank" rel="noopener noreferrer" title="Share on WhatsApp" aria-label="Share on WhatsApp">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1-4.5A8.4 8.4 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+    </a>
+  </div>
+
+  <div class="related-posts">
+    <h2>Related Articles</h2>
+    <!-- REPLACE: set this post's category below so related posts pull correctly -->
+    <div class="card-grid" id="relatedPosts" data-current-category="Category" data-current-slug="your-post-slug"></div>
+    <p id="noRelated" class="section-intro" style="display:none; margin-top:10px; text-align:left;">No related articles published yet.</p>
+  </div>
+</section>
+
+</main>
+
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">ASCENT <span>DIGITAL</span></div>
+      <p>AI-Powered SEO &amp; Automation Specialist<br>Technical SEO Consultant<br>Founded by Omme Kalsoom</p>
+      <div class="social-links">
+        <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">in</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Fiverr" aria-label="Fiverr">fv</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">gh</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook">fb</a>
+        <a href="https://wa.me/923315044035" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1-4.5A8.4 8.4 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+        </a>
+        <a href="mailto:ommefreelancer@gmail.com" title="Email" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="../index.html#technical-seo">Technical SEO</a></li>
+        <li><a href="../index.html#on-page-seo">On-Page SEO</a></li>
+        <li><a href="../index.html#local-seo">Local SEO</a></li>
+        <li><a href="../index.html#keyword-research">Keyword Research</a></li>
+        <li><a href="../index.html#link-building">Link Building</a></li>
+        <li><a href="../index.html#seo-strategy-consulting">SEO Strategy &amp; Consulting</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="../terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Get In Touch</h4>
+      <a href="mailto:ommefreelancer@gmail.com">ommefreelancer@gmail.com</a>
+      <a href="https://wa.me/923315044035" target="_blank" rel="noopener noreferrer">+92 331 5044035</a>
+      <span>Pakistan</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Ascent Digital. All rights reserved.</p>
+    <a href="../index.html#home" class="footer-top-link">Back to Top &uarr;</a>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+<script src="../assets/js/blog-posts-data.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function () {
+  // Auto-fills share links with this page's real URL/title, and renders
+  // related posts by matching category. No manual editing needed here.
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  const twitter = document.getElementById('shareTwitter');
+  const linkedin = document.getElementById('shareLinkedIn');
+  const facebook = document.getElementById('shareFacebook');
+  const whatsapp = document.getElementById('shareWhatsApp');
+
+  if (twitter) twitter.href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+  if (linkedin) linkedin.href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+  if (facebook) facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+  if (whatsapp) whatsapp.href = `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
+
+  const relatedEl = document.getElementById('relatedPosts');
+  const noRelated = document.getElementById('noRelated');
+  if (relatedEl && typeof blogPosts !== 'undefined') {
+    const category = relatedEl.dataset.currentCategory;
+    const currentSlug = relatedEl.dataset.currentSlug;
+    const related = blogPosts
+      .filter(p => p.category === category && p.slug !== currentSlug)
+      .slice(0, 3);
+
+    if (!related.length) {
+      noRelated.style.display = 'block';
+    } else {
+      relatedEl.innerHTML = related.map(p => `
+        <article class="post-card">
+          <div class="post-card-body">
+            <span class="post-category">${p.category}</span>
+            <h3><a href="${p.slug}.html">${p.title}</a></h3>
+            <p>${p.excerpt}</p>
+          </div>
+        </article>
+      `).join('');
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
