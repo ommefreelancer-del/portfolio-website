@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Security: CSP script-src hash covers this page's JSON-LD block below. If you edit that block, regenerate the hash (see SECURITY.md) or this page's schema will silently stop loading. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-L0JE/0Tcwkv8pHgWWj/gBNNmTt2KfBszgqwvWqwHQ/M='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-rbFlqJX7NSbWeBS/uFuXXNSWDGdzZx42NQcK2h/uPPM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Blog | Ascent Digital</title>
-<meta name="description" content="SEO, technical SEO, and AI-assisted automation insights from Ascent Digital, founded by Omme Kalsoom.">
-<!-- TODO before launch: replace https://example.com/ references with your real domain, and hello@yourdomain.com with your real business email --><link rel="canonical" href="https://example.com/blog/">
-<meta property="og:title" content="Blog | Ascent Digital">
-<meta property="og:description" content="SEO, technical SEO, and AI-assisted automation insights from Ascent Digital.">
+<title>Skills &amp; Expertise | Ascent Digital</title>
+<meta name="description" content="Skills and areas of expertise: SEO, content writing, web development, and AI automation, including AI agent development and agentic AI systems.">
+<!-- TODO before launch: replace https://example.com/ references with your real domain, and hello@yourdomain.com with your real business email --><link rel="canonical" href="https://example.com/skills/">
+<meta property="og:title" content="Skills &amp; Expertise | Ascent Digital">
+<meta property="og:description" content="SEO, content writing, web development, and AI automation skills, including AI agent development and agentic AI systems.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://example.com/blog/">
+<meta property="og:url" content="https://example.com/skills/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog | Ascent Digital">
-<meta name="twitter:description" content="SEO, technical SEO, and AI-assisted automation insights from Ascent Digital.">
+<meta name="twitter:title" content="Skills &amp; Expertise | Ascent Digital">
+<meta name="twitter:description" content="SEO, content writing, web development, and AI automation skills, including AI agent development and agentic AI systems.">
 <meta name="theme-color" content="#2563EB">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,12 +24,11 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Ascent Digital Blog",
-  "url": "https://example.com/blog/",
-  "description": "SEO, technical SEO, and AI-assisted automation insights from Ascent Digital.",
-  "isPartOf": { "@id": "https://example.com/#website" },
-  "publisher": { "@id": "https://example.com/#organization" }
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Skills", "item": "https://example.com/skills/" }
+  ]
 }
 </script>
 </head>
@@ -47,9 +46,9 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="../about/">About</a></li>
       <li><a href="../services/">Services</a></li>
-      <li><a href="../skills/">Skills</a></li>
+      <li><a href="index.html" aria-current="page">Skills</a></li>
       <li><a href="../portfolio/">Portfolio</a></li>
-      <li><a href="index.html" aria-current="page">Blog</a></li>
+      <li><a href="../blog/">Blog</a></li>
       <li><a href="../faq/">FAQ</a></li>
       <li><a href="../contact/">Contact</a></li>
     </ul>
@@ -62,36 +61,76 @@
 <main id="main-content">
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="../index.html">Home</a> / <span aria-current="page">Blog</span>
+  <a href="../index.html">Home</a> / <span aria-current="page">Skills</span>
 </nav>
 
 <div class="page-header">
-  <h1>The Ascent Digital Blog</h1>
-  <p>Practical writing on SEO, technical fixes, and AI-assisted workflows. No filler, no recycled listicles.</p>
+  <h1>Skills &amp; Expertise</h1>
+  <p>Four connected areas: search, content, code, and AI. Each one makes the others more effective.</p>
 </div>
 
-<div class="blog-controls" id="blogControls">
-  <div class="blog-search">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="10" r="6"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
-    <label for="blogSearch" class="sr-only">Search articles</label>
-    <input type="search" id="blogSearch" placeholder="Search articles&hellip;">
-  </div>
-  <div class="filter-row" id="categoryFilters" aria-label="Filter by category"></div>
-  <div class="filter-row" id="tagFilters" aria-label="Filter by tag"></div>
-</div>
+<section style="padding-top: 0;">
 
-<section id="blogListing" style="padding-top: 0;">
-  <div class="card-grid" id="postGrid"></div>
-  <p id="noResults" class="section-intro" style="display:none; margin-top:20px;">No articles match your search. Try a different keyword or clear the filters.</p>
-  <div class="blog-empty" id="blogEmpty" style="display:none;">
-    <div class="card-icon" style="margin:0 auto 22px;">
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+  <div class="service-group">
+    <h2 class="service-group-title">SEO &amp; Search</h2>
+    <div class="pill-list reveal">
+      <span class="pill">AI-Powered SEO</span>
+      <span class="pill">Technical SEO</span>
+      <span class="pill">On-Page SEO</span>
+      <span class="pill">Off-Page SEO</span>
+      <span class="pill">Local SEO</span>
+      <span class="pill">International SEO</span>
+      <span class="pill">Keyword Research</span>
+      <span class="pill">Competitor Analysis</span>
+      <span class="pill">SEO Strategy</span>
+      <span class="pill">Link Building</span>
+      <span class="pill">Guest Posting</span>
+      <span class="pill">Search Console</span>
+      <span class="pill">Google Analytics</span>
     </div>
-    <h2>New Articles Coming Soon</h2>
-    <p>This blog is set up and ready to go. Real, original articles on SEO, technical fixes, and AI-assisted automation will be published here soon, nothing generic, nothing recycled.</p>
-    <a href="../contact/" class="btn btn-primary">Get In Touch Instead</a>
   </div>
-  <div class="pagination" id="pagination"></div>
+
+  <div class="service-group">
+    <h2 class="service-group-title">Content Writing</h2>
+    <div class="pill-list reveal">
+      <span class="pill">Content Writing</span>
+      <span class="pill">SEO Content Writing</span>
+      <span class="pill">Technical Content Writing</span>
+      <span class="pill">Content Strategy</span>
+      <span class="pill">AI Content Optimization</span>
+    </div>
+  </div>
+
+  <div class="service-group">
+    <h2 class="service-group-title">Web Development</h2>
+    <div class="pill-list reveal">
+      <span class="pill">Web Development</span>
+      <span class="pill">Frontend Development</span>
+      <span class="pill">Responsive Web Development</span>
+      <span class="pill">Website Optimization</span>
+    </div>
+  </div>
+
+  <div class="service-group">
+    <h2 class="service-group-title">AI &amp; Automation</h2>
+    <div class="pill-list reveal">
+      <span class="pill">AI Automation</span>
+      <span class="pill">Workflow Automation</span>
+      <span class="pill">AI Agent Development</span>
+      <span class="pill">Agentic AI Systems</span>
+      <span class="pill">Custom AI Agents</span>
+      <span class="pill">Multi-Agent AI Systems</span>
+      <span class="pill">AI SEO Operating Systems</span>
+      <span class="pill">Prompt Engineering</span>
+      <span class="pill">AI Consulting</span>
+    </div>
+  </div>
+
+  <div class="teaser-footer reveal">
+    <a href="../services/" class="btn btn-primary">See How These Become Services</a>
+    <a href="../portfolio/" class="btn btn-outline">View Portfolio</a>
+  </div>
+
 </section>
 
 </main>
@@ -120,14 +159,14 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about/">About</a></li>
         <li><a href="../services/">Services</a></li>
-        <li><a href="../skills/">Skills</a></li>
+        <li><a href="index.html">Skills</a></li>
         <li><a href="../portfolio/">Portfolio</a></li>
       </ul>
     </div>
     <div class="footer-links">
       <h4>Resources</h4>
       <ul>
-        <li><a href="index.html">Blog</a></li>
+        <li><a href="../blog/">Blog</a></li>
         <li><a href="../faq/">FAQ</a></li>
         <li><a href="../privacy-policy.html">Privacy Policy</a></li>
         <li><a href="../terms.html">Terms of Service</a></li>
@@ -142,15 +181,13 @@
   </div>
   <div class="footer-bottom">
     <p>&copy; <span id="year"></span> Ascent Digital. All rights reserved.</p>
-    <a href="../index.html#home" class="footer-top-link">Back to Top &uarr;</a>
+    <a href="../index.html" class="footer-top-link">Back to Top &uarr;</a>
   </div>
 </footer>
 
 <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
 
-<script src="../assets/js/blog-posts-data.js"></script>
 <script src="../assets/js/main.js"></script>
-<script src="../assets/js/blog-listing.js"></script>
 
 </body>
 </html>

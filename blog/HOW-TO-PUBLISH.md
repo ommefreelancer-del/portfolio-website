@@ -1,6 +1,6 @@
 # How to publish a blog post
 
-The blog system is fully built and ready to use. No code changes are required to publish a post, just these four steps.
+The blog system is fully built and ready to use. No code changes are required to publish a post, just these five steps.
 
 ## 1. Duplicate the template
 
@@ -50,5 +50,9 @@ This is what powers the blog listing page: search, category filters, tag filters
 ## 4. Add it to the sitemap
 
 Open `sitemap.xml` at the project root and add a `<url>` entry pointing to the new page, following the pattern already used for the other pages.
+
+## 5. Regenerate the CSP hash
+
+Every page locks down which scripts are allowed to run via a Content-Security-Policy meta tag, and that includes a hash of the JSON-LD block you just edited in step 2. The hash from the template no longer matches once you've changed the content, so the browser will silently block your post's structured data until you update it. See `SECURITY.md` for the exact command and why this exists.
 
 That's it, no build step, no deployment tooling. Push the new files and they're live.

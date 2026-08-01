@@ -14,6 +14,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- REPLACE: after you fill in the Article/BreadcrumbList JSON-LD below, this CSP hash will no longer match and the schema will silently stop loading. Regenerate it (see blog/HOW-TO-PUBLISH.md, step 5) and paste the new hash in below before publishing. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-8ECGjJcEK64ODnX54ov6Eh084XGZ5x60Mx+C6kCKqs8='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <!-- REPLACE: page title -->
 <title>Your Post Title | Ascent Digital Blog</title>
 <!-- REPLACE: meta description, 150-160 characters, written for humans, not stuffed with keywords -->
@@ -70,15 +73,14 @@
   </a>
   <nav id="navMenu" aria-label="Primary">
     <ul>
-      <li><a href="../index.html#home">Home</a></li>
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#services">Services</a></li>
-      <li><a href="../index.html#why">Why Us</a></li>
-      <li><a href="../index.html#tools">Tools</a></li>
-      <li><a href="../index.html#projects">Portfolio</a></li>
-      <li><a href="../index.html#faq">FAQ</a></li>
-      <li><a href="index.html" aria-current="page">Blog</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../services/">Services</a></li>
+      <li><a href="../skills/">Skills</a></li>
+      <li><a href="../portfolio/">Portfolio</a></li>
+      <li><a href="index.html">Blog</a></li>
+      <li><a href="../faq/">FAQ</a></li>
+      <li><a href="../contact/">Contact</a></li>
     </ul>
   </nav>
   <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
@@ -131,7 +133,7 @@
     <div class="avatar">OK</div>
     <div>
       <h4>Omme Kalsoom</h4>
-      <p>Founder of Ascent Digital. <a href="../index.html#about">Read more about Omme &rarr;</a></p>
+      <p>Founder of Ascent Digital. <a href="../about/">Read more about Omme &rarr;</a></p>
     </div>
   </div>
 
@@ -166,7 +168,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">ASCENT <span>DIGITAL</span></div>
-      <p>AI-Powered SEO &amp; Automation Specialist<br>Technical SEO Consultant<br>Founded by Omme Kalsoom</p>
+      <p>AI Automation Specialist &amp; Technical SEO Consultant<br>AI Agent Developer &middot; Builder of ADASOS<br>Founded by Omme Kalsoom</p>
       <div class="social-links">
         <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">in</a>
         <a href="#" target="_blank" rel="noopener noreferrer" title="Fiverr" aria-label="Fiverr">fv</a>
@@ -175,34 +177,33 @@
         <a href="https://wa.me/923315044035" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1-4.5A8.4 8.4 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
         </a>
-        <a href="mailto:ommefreelancer@gmail.com" title="Email" aria-label="Email">
+        <a href="mailto:hello@yourdomain.com" title="Email" aria-label="Email">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
         </a>
       </div>
     </div>
     <div class="footer-links">
-      <h4>Services</h4>
+      <h4>Explore</h4>
       <ul>
-        <li><a href="../index.html#technical-seo">Technical SEO</a></li>
-        <li><a href="../index.html#on-page-seo">On-Page SEO</a></li>
-        <li><a href="../index.html#local-seo">Local SEO</a></li>
-        <li><a href="../index.html#keyword-research">Keyword Research</a></li>
-        <li><a href="../index.html#link-building">Link Building</a></li>
-        <li><a href="../index.html#seo-strategy-consulting">SEO Strategy &amp; Consulting</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../services/">Services</a></li>
+        <li><a href="../skills/">Skills</a></li>
+        <li><a href="../portfolio/">Portfolio</a></li>
       </ul>
     </div>
     <div class="footer-links">
       <h4>Resources</h4>
       <ul>
         <li><a href="index.html">Blog</a></li>
-        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../faq/">FAQ</a></li>
         <li><a href="../privacy-policy.html">Privacy Policy</a></li>
         <li><a href="../terms.html">Terms of Service</a></li>
       </ul>
     </div>
     <div class="footer-contact">
       <h4>Get In Touch</h4>
-      <a href="mailto:ommefreelancer@gmail.com">ommefreelancer@gmail.com</a>
+      <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
       <a href="https://wa.me/923315044035" target="_blank" rel="noopener noreferrer">+92 331 5044035</a>
       <span>Pakistan</span>
     </div>
@@ -217,48 +218,7 @@
 
 <script src="../assets/js/blog-posts-data.js"></script>
 <script src="../assets/js/main.js"></script>
-<script>
-(function () {
-  // Auto-fills share links with this page's real URL/title, and renders
-  // related posts by matching category. No manual editing needed here.
-  const pageUrl = encodeURIComponent(window.location.href);
-  const pageTitle = encodeURIComponent(document.title);
-
-  const twitter = document.getElementById('shareTwitter');
-  const linkedin = document.getElementById('shareLinkedIn');
-  const facebook = document.getElementById('shareFacebook');
-  const whatsapp = document.getElementById('shareWhatsApp');
-
-  if (twitter) twitter.href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
-  if (linkedin) linkedin.href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
-  if (facebook) facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-  if (whatsapp) whatsapp.href = `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
-
-  const relatedEl = document.getElementById('relatedPosts');
-  const noRelated = document.getElementById('noRelated');
-  if (relatedEl && typeof blogPosts !== 'undefined') {
-    const category = relatedEl.dataset.currentCategory;
-    const currentSlug = relatedEl.dataset.currentSlug;
-    const related = blogPosts
-      .filter(p => p.category === category && p.slug !== currentSlug)
-      .slice(0, 3);
-
-    if (!related.length) {
-      noRelated.style.display = 'block';
-    } else {
-      relatedEl.innerHTML = related.map(p => `
-        <article class="post-card">
-          <div class="post-card-body">
-            <span class="post-category">${p.category}</span>
-            <h3><a href="${p.slug}.html">${p.title}</a></h3>
-            <p>${p.excerpt}</p>
-          </div>
-        </article>
-      `).join('');
-    }
-  }
-})();
-</script>
+<script src="../assets/js/post-template.js"></script>
 
 </body>
 </html>

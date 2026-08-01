@@ -110,13 +110,13 @@ header {
   letter-spacing: 0.3px;
 }
 
-nav ul {
+#navMenu ul {
   list-style: none;
   display: flex;
   gap: 18px;
 }
 
-nav a {
+#navMenu a {
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.2px;
@@ -126,7 +126,7 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a::after {
+#navMenu a::after {
   content: '';
   position: absolute;
   bottom: -6px;
@@ -137,8 +137,8 @@ nav a::after {
   transition: width 0.3s;
 }
 
-nav a:hover, nav a[aria-current="page"] { color: var(--primary); }
-nav a:hover::after, nav a[aria-current="page"]::after { width: 100%; }
+#navMenu a:hover, #navMenu a[aria-current="page"] { color: var(--primary); }
+#navMenu a:hover::after, #navMenu a[aria-current="page"]::after { width: 100%; }
 
 .menu-toggle {
   display: none;
@@ -645,6 +645,119 @@ section {
   font-family: 'Sora', sans-serif;
   font-weight: 800;
 }
+
+/* Service / skill category groups (Services, Skills pages) */
+.service-group {
+  margin-bottom: 60px;
+}
+
+.service-group:last-child {
+  margin-bottom: 0;
+}
+
+.service-group-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.3rem;
+  color: var(--secondary);
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-group-title span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Project cards (Portfolio page) */
+.project-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #eef2ff, #ecfdf5);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.project-status {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.project-status.status-live { background: var(--accent); color: var(--secondary); }
+.project-status.status-dev { background: var(--primary); color: #fff; }
+
+.project-card-full {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.project-card-full:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15,23,42,0.08);
+  border-color: rgba(37,99,235,0.25);
+}
+
+.project-card-full h3 { font-size: 1.15rem; margin-bottom: 10px; color: var(--text-primary); }
+.project-card-full p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px; }
+.project-card-full a.project-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; }
+.project-card-full a.project-link:hover { color: var(--secondary); }
+
+/* Home page teaser sections (condensed cards linking to full pages) */
+.teaser-footer {
+  text-align: center;
+  margin-top: 44px;
+}
+
+/* Decorative node/line SVG accent, used behind hero and page headers */
+.decorative-nodes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decorative-nodes svg { position: absolute; opacity: 0.5; }
+.decorative-nodes svg.nodes-right { top: 10%; right: -4%; width: 340px; height: 340px; }
+.decorative-nodes svg.nodes-left { bottom: 6%; left: -6%; width: 260px; height: 260px; }
+
+.hero > *:not(.decorative-nodes) { position: relative; z-index: 1; }
+
+/* CTA band (Home closing section) */
+.cta-band {
+  background: var(--secondary);
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 8%;
+}
+
+@media (min-width: 1280px) { .cta-band { margin: 0 auto; } }
+
+.cta-band h2 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+.cta-band p { color: #94a3b8; font-size: 1rem; margin-bottom: 30px; max-width: 560px; margin-left: auto; margin-right: auto; }
 
 /* FAQ accordion */
 .faq-list {
@@ -1212,9 +1325,9 @@ footer .social-links a:hover { background: var(--accent); border-color: var(--ac
   .about-grid, .contact-wrap { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
-  nav { position: fixed; top: 0; right: -100%; height: 100vh; width: 270px; background: var(--bg); flex-direction: column; padding: 110px 40px; transition: right 0.4s ease; box-shadow: -10px 0 30px rgba(15,23,42,0.15); }
-  nav.open { right: 0; }
-  nav ul { flex-direction: column; gap: 26px; }
+  #navMenu { position: fixed; top: 0; right: -100%; height: 100vh; width: 270px; background: var(--bg); flex-direction: column; padding: 110px 40px; transition: right 0.4s ease; box-shadow: -10px 0 30px rgba(15,23,42,0.15); }
+  #navMenu.open { right: 0; }
+  #navMenu ul { flex-direction: column; gap: 26px; }
   .menu-toggle { display: flex; }
   section { padding: 90px 6%; }
   .value-chips { grid-template-columns: 1fr 1fr; }

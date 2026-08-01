@@ -18,6 +18,13 @@ while ($listener.IsListening) {
   if ($path -eq "/") { $path = "/index.html" }
   $filePath = Join-Path $root ($path.TrimStart("/"))
 
+  if (Test-Path $filePath -PathType Container) {
+    $filePath = Join-Path $filePath "index.html"
+  } elseif (-not (Test-Path $filePath -PathType Leaf) -and [System.IO.Path]::GetExtension($filePath) -eq "") {
+    $indexPath = Join-Path $filePath "index.html"
+    if (Test-Path $indexPath -PathType Leaf) { $filePath = $indexPath }
+  }
+
   if (Test-Path $filePath -PathType Leaf) {
     $ext = [System.IO.Path]::GetExtension($filePath)
     $contentType = if ($mime.ContainsKey($ext)) { $mime[$ext] } else { "application/octet-stream" }
@@ -27,8 +34,16 @@ while ($listener.IsListening) {
     $res.OutputStream.Write($bytes, 0, $bytes.Length)
   } else {
     $res.StatusCode = 404
-    $msg = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found")
-    $res.OutputStream.Write($msg, 0, $msg.Length)
+    $notFoundPath = Join-Path $root "404.html"
+    if (Test-Path $notFoundPath -PathType Leaf) {
+      $bytes = [System.IO.File]::ReadAllBytes($notFoundPath)
+      $res.ContentType = "text/html"
+      $res.ContentLength64 = $bytes.Length
+      $res.OutputStream.Write($bytes, 0, $bytes.Length)
+    } else {
+      $msg = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found")
+      $res.OutputStream.Write($msg, 0, $msg.Length)
+    }
   }
   $res.OutputStream.Close()
 }

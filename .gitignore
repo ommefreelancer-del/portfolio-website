@@ -1,0 +1,20 @@
+# Environment / secrets — never commit real credentials
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor artifacts
+.vscode/
+.idea/
+
+# Dependency directories (in case tooling is added later)
+node_modules/
+
+# Local server logs (if any get created during development)
+*.log
