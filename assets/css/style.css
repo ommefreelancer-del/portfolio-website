@@ -269,7 +269,7 @@ header {
 
 .hero-socials { opacity: 0; animation: fadeUp 0.8s ease 0.55s forwards; }
 
-.social-links a {
+.social-links a, .social-links button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -281,6 +281,8 @@ header {
   color: var(--primary);
   font-weight: 600;
   font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -289,6 +291,14 @@ header {
   border-color: var(--accent);
   color: var(--secondary);
   transform: translateY(-4px);
+}
+
+/* Social profiles with no real URL yet are disabled buttons instead of
+   dead "#" anchors -- never fabricate a profile URL, but never leave a
+   broken-looking link either. */
+.social-links button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 
 .scroll-cue {
@@ -888,7 +898,7 @@ section {
   flex-shrink: 0;
 }
 
-.contact-item div h4 {
+.contact-item div h3 {
   font-size: 0.82rem;
   color: var(--text-secondary);
   font-weight: 400;
@@ -1156,7 +1166,7 @@ form .btn:hover { background: var(--accent); border-color: var(--accent); color:
   flex-shrink: 0;
 }
 
-.author-box h4 { font-size: 0.95rem; color: var(--text-primary); margin-bottom: 2px; }
+.author-box h3 { font-size: 0.95rem; color: var(--text-primary); margin-bottom: 2px; }
 .author-box p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; }
 .author-box a { color: var(--primary); }
 
@@ -1227,7 +1237,7 @@ footer {
   margin-bottom: 22px;
 }
 
-footer .social-links a {
+footer .social-links a, footer .social-links button {
   background: rgba(255,255,255,0.06);
   border-color: rgba(255,255,255,0.1);
   color: #fff;
@@ -1237,7 +1247,7 @@ footer .social-links a {
 
 footer .social-links a:hover { background: var(--accent); border-color: var(--accent); color: var(--secondary); }
 
-.footer-links h4, .footer-contact h4 {
+.footer-links h2, .footer-contact h2 {
   color: #fff;
   font-size: 1rem;
   margin-bottom: 20px;
