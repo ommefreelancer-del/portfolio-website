@@ -1,5 +1,2 @@
 User-agent: *
 Allow: /
-Disallow: /blog/post-template.html
-
-Sitemap: https://example.com/sitemap.xml
