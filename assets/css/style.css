@@ -688,6 +688,7 @@ section {
 /* Project cards (Portfolio page) */
 .project-thumb {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
   background: linear-gradient(145deg, #eef2ff, #ecfdf5);
@@ -1351,4 +1352,30 @@ footer .social-links a:hover { background: var(--accent); border-color: var(--ac
   .value-chips { grid-template-columns: 1fr; }
   .contact-highlights { flex-direction: column; align-items: stretch; }
   .contact-pill { justify-content: center; }
+}
+
+/* ===== Visual enhancement (2026-08-27): real, royalty-free Pixabay photos
+   added to the hero background and page banners. See assets/img/CREDITS.md
+   for source/license attribution for every file below. ===== */
+.hero-photo-bg {
+  background-image: url('../img/hero-tech-abstract-5090539.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.16;
+}
+
+.page-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  margin: 0 auto 10px;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+}
+
+@media (max-width: 640px) {
+  .page-banner { aspect-ratio: 16 / 9; border-radius: 12px; }
 }
