@@ -198,6 +198,35 @@ header {
 
 .hero h1 span { color: var(--primary); }
 
+.hero-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  max-width: 720px;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.24s forwards;
+}
+
+.hero-services li {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.hero-services li:hover {
+  border-color: var(--accent);
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
+
 .hero p {
   max-width: 660px;
   color: var(--text-secondary);
@@ -751,6 +780,17 @@ section {
 .decorative-nodes svg { position: absolute; opacity: 0.5; }
 .decorative-nodes svg.nodes-right { top: 10%; right: -4%; width: 340px; height: 340px; }
 .decorative-nodes svg.nodes-left { bottom: 6%; left: -6%; width: 260px; height: 260px; }
+
+@keyframes nodePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.5); }
+}
+
+.decorative-nodes .node-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodePulse 2.8s ease-in-out infinite;
+}
 
 .hero > *:not(.decorative-nodes) { position: relative; z-index: 1; }
 
@@ -1323,7 +1363,8 @@ footer .social-links a:hover { background: var(--accent); border-color: var(--ac
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .hero-tag, .hero h1, .hero p, .hero-buttons, .hero-socials { opacity: 1; animation: none; }
+  .hero-tag, .hero h1, .hero p, .hero-buttons, .hero-socials, .hero-services { opacity: 1; animation: none; }
+  .node-pulse { animation: none; }
 }
 
 /* Responsive */
@@ -1351,4 +1392,10 @@ footer .social-links a:hover { background: var(--accent); border-color: var(--ac
   .value-chips { grid-template-columns: 1fr; }
   .contact-highlights { flex-direction: column; align-items: stretch; }
   .contact-pill { justify-content: center; }
+}
+
+@media (max-width: 680px) {
+  .decorative-nodes svg { opacity: 0.3; }
+  .decorative-nodes svg.nodes-right { top: 4%; right: -14%; width: 200px; height: 200px; }
+  .decorative-nodes svg.nodes-left { bottom: 3%; left: -14%; width: 160px; height: 160px; }
 }
