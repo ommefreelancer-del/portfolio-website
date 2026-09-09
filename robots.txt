@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /blog/post-template.html
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://ommefreelancer-del.github.io/portfolio-website/sitemap.xml
