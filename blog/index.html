@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Security: CSP script-src hash covers this page's JSON-LD block below. If you edit that block, regenerate the hash (see SECURITY.md) or this page's schema will silently stop loading. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-L0JE/0Tcwkv8pHgWWj/gBNNmTt2KfBszgqwvWqwHQ/M='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-i2Z6MXZGtLDlUMOgSK6whA6l7yK3SFmL4NKQQ9IJtOg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Blog | Ascent Digital</title>
 <meta name="description" content="SEO, technical SEO, and AI-assisted automation insights from Ascent Digital, founded by Omme Kalsoom.">
-<!-- TODO before launch: replace https://example.com/ references with your real domain, and hello@yourdomain.com with your real business email --><link rel="canonical" href="https://example.com/blog/">
+<!-- TODO before launch: replace hello@yourdomain.com with your real business email --><link rel="canonical" href="https://ommefreelancer-del.github.io/portfolio-website/blog/">
 <meta property="og:title" content="Blog | Ascent Digital">
 <meta property="og:description" content="SEO, technical SEO, and AI-assisted automation insights from Ascent Digital.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://example.com/blog/">
+<meta property="og:url" content="https://ommefreelancer-del.github.io/portfolio-website/blog/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Blog | Ascent Digital">
 <meta name="twitter:description" content="SEO, technical SEO, and AI-assisted automation insights from Ascent Digital.">
@@ -26,10 +26,10 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Ascent Digital Blog",
-  "url": "https://example.com/blog/",
+  "url": "https://ommefreelancer-del.github.io/portfolio-website/blog/",
   "description": "SEO, technical SEO, and AI-assisted automation insights from Ascent Digital.",
-  "isPartOf": { "@id": "https://example.com/#website" },
-  "publisher": { "@id": "https://example.com/#organization" }
+  "isPartOf": { "@id": "https://ommefreelancer-del.github.io/portfolio-website/#website" },
+  "publisher": { "@id": "https://ommefreelancer-del.github.io/portfolio-website/#organization" }
 }
 </script>
 </head>
@@ -82,6 +82,23 @@
 
 <section id="blogListing" style="padding-top: 0;">
   <div class="card-grid" id="postGrid"></div>
+  <!-- SEO FIX: the card grid above is rendered entirely by blog-listing.js from
+       assets/js/blog-posts-data.js, so a crawler that does not execute JavaScript
+       sees an empty #postGrid and no static links to any article. This <noscript>
+       block gives every published post a real, static, crawlable <a href> here,
+       matching blog-posts-data.js exactly -- update both together when a post is
+       added. JS-enabled visitors never see this block (the card grid above renders
+       instead), so existing visual behavior is unchanged. -->
+  <noscript>
+    <ul class="static-post-list">
+      <li><a href="what-is-an-seo-audit.html">What Is an SEO Audit? A Beginner's Guide</a> &mdash; Learn what an SEO audit is, what it checks, how the process works, and how to prioritize and act on the findings.</li>
+      <li><a href="what-is-guest-posting.html">What Is Guest Posting? A Complete Guide</a> &mdash; A complete guide to guest posting: what it is, how it works, its real connection to SEO, and how to find and pitch legitimate opportunities.</li>
+      <li><a href="what-is-keyword-research.html">What Is Keyword Research? A Complete Beginner's Guide</a> &mdash; Learn what keyword research is, how to evaluate and cluster keywords, and how research turns into an actual content strategy.</li>
+      <li><a href="what-is-on-page-seo.html">What Is On-Page SEO? A Complete Guide</a> &mdash; A complete guide to on-page SEO: what it includes, why it matters, and a step-by-step workflow for optimizing a page.</li>
+      <li><a href="what-is-off-page-seo.html">What Is Off-Page SEO? A Beginner's Guide</a> &mdash; Learn what off-page SEO is, how backlinks and other external signals work, and which off-page activities deserve priority.</li>
+      <li><a href="what-is-technical-seo.html">What Is Technical SEO? A Beginner's Guide</a> &mdash; Learn what technical SEO covers, why it matters, and how to run a basic technical SEO audit as a beginner.</li>
+    </ul>
+  </noscript>
   <p id="noResults" class="section-intro" style="display:none; margin-top:20px;">No articles match your search. Try a different keyword or clear the filters.</p>
   <div class="blog-empty" id="blogEmpty" style="display:none;">
     <div class="card-icon" style="margin:0 auto 22px;">
