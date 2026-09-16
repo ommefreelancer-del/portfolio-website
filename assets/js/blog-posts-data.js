@@ -69,5 +69,14 @@ const blogPosts = [
     tags: ["technical-seo", "site-audit", "crawlability"],
     date: "2026-09-09",
     readTime: "15 min read"
+  },
+  {
+    slug: "local-seo-audit-checklist",
+    title: "Local SEO Audit Checklist: 15 Steps to Improve Your Google Rankings",
+    excerpt: "Learn how to conduct a local SEO audit with 15 practical checks for Google Business Profile, website SEO, reviews, citations, links, and local rankings.",
+    category: "Local SEO",
+    tags: ["local-seo", "seo-audit", "small-business-seo"],
+    date: "2026-09-16",
+    readTime: "12 min read"
   }
 ];
