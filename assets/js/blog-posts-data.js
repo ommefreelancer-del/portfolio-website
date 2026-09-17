@@ -78,5 +78,14 @@ const blogPosts = [
     tags: ["local-seo", "seo-audit", "small-business-seo"],
     date: "2026-09-16",
     readTime: "12 min read"
+  },
+  {
+    slug: "google-ai-overviews-seo-strategies",
+    title: "How to Show Up in Google AI Overviews: 7 SEO Strategies",
+    excerpt: "Learn 7 practical SEO strategies to get your content cited in Google AI Overviews, from content structure and schema markup to E-E-A-T and technical SEO.",
+    category: "AI SEO",
+    tags: ["ai-overviews", "seo-strategy", "generative-ai-search"],
+    date: "2026-09-16",
+    readTime: "11 min read"
   }
 ];
