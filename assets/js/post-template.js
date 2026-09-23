@@ -1,6 +1,7 @@
 (function () {
   // Auto-fills share links with this page's real URL/title, and renders
-  // related posts by matching category. No manual editing needed here.
+  // related posts by matching category (with a shared-tag fallback when
+  // no other post is in the same category). No manual editing needed here.
   const pageUrl = encodeURIComponent(window.location.href);
   const pageTitle = encodeURIComponent(document.title);
 
@@ -25,9 +26,28 @@
   if (relatedEl && typeof blogPosts !== 'undefined') {
     const category = relatedEl.dataset.currentCategory;
     const currentSlug = relatedEl.dataset.currentSlug;
-    const related = blogPosts
+    let related = blogPosts
       .filter(p => p.category === category && p.slug !== currentSlug)
       .slice(0, 3);
+
+    // Fallback: only when no other post shares this category, show posts
+    // that share at least one tag with the current post (most shared tags
+    // first, then newest). Posts with no shared tags are never shown.
+    if (!related.length) {
+      const current = blogPosts.find(p => p.slug === currentSlug);
+      const currentTags = (current && Array.isArray(current.tags)) ? current.tags : [];
+      related = blogPosts
+        .filter(p => p.slug !== currentSlug)
+        .map((p, i) => ({
+          p,
+          i,
+          shared: (p.tags || []).filter(t => currentTags.includes(t)).length
+        }))
+        .filter(x => x.shared > 0)
+        .sort((a, b) => (b.shared - a.shared) || b.p.date.localeCompare(a.p.date) || (a.i - b.i))
+        .slice(0, 3)
+        .map(x => x.p);
+    }
 
     if (!related.length) {
       noRelated.style.display = 'block';
