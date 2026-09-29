@@ -22,6 +22,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.prose .table-wrap { overflow-x: auto; margin: 0 0 24px; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 0.95rem; color: var(--text-secondary); }
+.prose th, .prose td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.6; }
+.prose th { background: var(--bg); color: var(--secondary); font-weight: 600; }
+.prose caption { caption-side: bottom; font-size: 0.85rem; padding-top: 8px; text-align: left; }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,7 +44,7 @@
         "url": "https://ommefreelancer-del.github.io/portfolio-website/"
       },
       "datePublished": "2026-09-09",
-      "dateModified": "2026-09-09",
+      "dateModified": "2026-09-29",
       "mainEntityOfPage": "https://ommefreelancer-del.github.io/portfolio-website/blog/what-is-keyword-research.html"
     },
     {
@@ -89,14 +96,14 @@
   <div class="post-meta-row">
         <span class="post-category">Keyword Research</span>
     <span>September 9, 2026</span>
-    <span>30 min read</span>
+    <span>39 min read</span>
   </div>
 
     <h1>What Is Keyword Research? A Complete Beginner's Guide</h1>
 
     <p>Keyword research is the process of figuring out what words and phrases people actually type or speak into a search engine when they're looking for something, and then using that information to guide what content gets created. At its simplest, it answers a practical question: if you want someone to find your website, what are they searching for in the first place?</p>
 <p>But a useful definition of keyword research has to go further than that. It isn't just about finding a list of popular search terms. It's about understanding why people search the way they do, how relevant a given search is to your business or website, how much competition already exists for it, and whether pursuing it is actually a good use of your time. Search volume -- the number of times a term is searched -- is one input into that decision, not the whole decision.</p>
-<p>This guide walks through what keyword research actually involves, from the basic vocabulary (keywords, search queries, search intent) through the practical evaluation process (demand, competition, business value, SERP analysis) and into how research findings turn into an actual content plan. It also covers where keyword research is heading as search itself changes, and the mistakes that most commonly derail it. By the end, the goal is for "what is keyword research" to mean something concrete and usable, not just a textbook definition.</p>
+<p>This guide walks through what keyword research actually involves, from the basic vocabulary (keywords, search queries, search intent) through the practical evaluation process (demand, competition, business value, SERP analysis) and into how research findings turn into an actual content plan, including one complete worked example from seed keyword to final decision. It also covers where keyword research is heading as search itself changes, and the mistakes that most commonly derail it. By the end, the goal is for "what is keyword research" to mean something concrete and usable, not just a textbook definition.</p>
 
 <h2>What Is Keyword Research?</h2>
 <p>Keyword research is the practice of identifying the terms and phrases your audience uses when searching, and then evaluating those terms to decide which ones are worth building content around. That evaluation is really the heart of it. Anyone can generate a long list of related search terms in a few minutes using a free tool. What separates keyword research from simply collecting keywords is everything that happens after the list exists.</p>
@@ -144,6 +151,14 @@
 <p>Useful starting points include broad seed topics related to your business, Google autocomplete suggestions, related searches, and People Also Ask questions. Dedicated keyword research tools also play an important role by providing search volume and competition estimates at scale.</p>
 <p>Looking at what competitors rank for can surface terms you had not considered. Google Search Console shows the actual queries already bringing people to your site. Your website's internal search function, if it has one, can also reveal what visitors are looking for once they arrive.</p>
 <p>Beyond tools entirely, some of the most useful keyword ideas come directly from people: questions customers ask over email or chat, patterns that come up repeatedly in sales conversations, recurring themes in support tickets, discussions in relevant forums or communities, and conversations on platforms like Reddit where people describe problems in their own words rather than in "SEO-friendly" phrasing. Google Trends can help you understand whether interest in a topic is growing or fading. None of these sources is sufficient alone -- the strongest keyword research usually combines tool-based data with this kind of first-hand, real-world input.</p>
+<p>A practical way to combine sources is to run the same seed topic through several of them in turn and note what each one adds:</p>
+<ol>
+<li><strong>Google Search:</strong> Type the seed topic and record the autocomplete suggestions, People Also Ask questions, and related searches. These show real phrasings, but no volume figures.</li>
+<li><strong>Google Trends:</strong> Compare two or three candidate phrases over several years to see whether interest is rising, falling, or seasonal. Trends shows relative interest on a 0&ndash;100 scale, not absolute search volume.</li>
+<li><strong>Google Search Console</strong> (existing sites only): Check which queries your pages already appear for, as described in its own section below.</li>
+<li><strong>A keyword research tool such as Ahrefs or Semrush:</strong> Enter the seed topic to expand the list into related terms and questions, with an estimated monthly volume, a difficulty score, and ranking data for each. Treat those numbers as estimates, since each tool calculates them differently.</li>
+</ol>
+<p>The output of this step is simply a longer, messier list of candidates. Deciding which ones are worth pursuing is the evaluation work covered next.</p>
 
 <h2>What Are Seed Keywords?</h2>
 <p>A seed keyword is a broad, general term used as a starting point for generating more specific keyword ideas -- it's rarely a keyword you'd target directly with a single page, since it's usually too broad and too competitive. Think of it as a category rather than a destination.</p>
@@ -201,6 +216,68 @@
 <p>Business value depends on how closely a keyword connects to your actual products or services, how well it reflects a real need or problem your customers have, whether the intent behind it suggests any commercial interest, how likely a visitor arriving through that keyword is to eventually take a meaningful action, and whether you can honestly and naturally connect the topic to what your business offers -- rather than stretching a tenuous connection just because the volume looks appealing.</p>
 <p>There's no universal formula that converts these factors into a single objective score. Different tools and practitioners weigh them differently, and reasonable judgment matters more than any specific system. What matters is asking the question directly for each keyword you're considering: if this page ranked and someone visited it, would that visit actually be worth something to the business?</p>
 
+<h2>A Worked Keyword Research Example</h2>
+<p>The concepts above are easier to apply once you see them used on one decision from start to finish. The scenario below is hypothetical, and the demand and competition ratings are rough labels chosen to show the reasoning, not measurements.</p>
+<p><strong>Illustrative example &mdash; not live search-volume/KD data.</strong></p>
+
+<h3>Step 1: Define the goal and the page</h3>
+<p>A small home bakery makes custom celebration cakes for customers in one city. Most orders come from word of mouth, and the owner wants the website to bring in more order inquiries. Defining that goal first shapes everything that follows: keywords that attract local people ready to order are worth more to this business than keywords that attract recipe readers from anywhere in the world.</p>
+
+<h3>Step 2: Start with a seed and discover candidates</h3>
+<p>The seed keyword is "custom cakes." Running it through autocomplete, People Also Ask, a keyword tool, and the questions customers actually send by message produces a candidate list that includes:</p>
+<ul>
+<li>custom birthday cakes [city]</li>
+<li>how far in advance to order a custom cake</li>
+<li>custom cake prices</li>
+<li>how to make a fondant cake at home</li>
+<li>cake</li>
+</ul>
+
+<h3>Step 3: Check relevance and intent</h3>
+<p>"Cake" is too broad to act on. Someone searching it might want recipes, photos, or a shop, and nothing about the query connects it to this bakery. "How to make a fondant cake at home" is on-topic but reflects do-it-yourself intent: the searcher wants to bake, not buy. The other three connect directly to what the bakery sells and to decisions customers make before ordering.</p>
+
+<h3>Step 4: Look at demand and competition</h3>
+<p>A keyword tool would show an estimated volume and a difficulty score for each phrase. Broad terms usually show far more volume than local or question-based phrases, and a phrase tied to a single city may show very little volume or none at all. That alone is not a reason to reject it. A low-volume local term that matches exactly what the business sells can be worth more than a popular term that doesn't.</p>
+
+<h3>Step 5: Analyze the SERP</h3>
+<p>Searching each remaining candidate shows what Google currently treats as a good answer. The table shows the kind of observations worth recording. Real results vary by query, location, and date, so always check the live results yourself.</p>
+<div class="table-wrap">
+<table>
+<caption>Illustrative SERP observations for a hypothetical business.</caption>
+<thead>
+<tr><th>Keyword</th><th>What ranks</th><th>What it suggests</th></tr>
+</thead>
+<tbody>
+<tr><td>custom birthday cakes [city]</td><td>A map of local bakery listings, bakery websites, and directory or marketplace pages</td><td>Local, transactional intent. A service page supported by a complete business listing fits this SERP; a blog post would not.</td></tr>
+<tr><td>how far in advance to order a custom cake</td><td>A People Also Ask box, bakery FAQ pages, short blog answers, and forum threads</td><td>Informational intent from people close to ordering. A clear, practical answer can realistically compete here.</td></tr>
+<tr><td>custom cake prices</td><td>Bakery pricing pages, cost guides from larger publishers, and forum discussions</td><td>Commercial investigation. Searchers want price ranges and what affects cost. National guides may be hard to outrank, but a local pricing page serves local searchers directly.</td></tr>
+</tbody>
+</table>
+</div>
+<p>The local results matter enough here that the bakery's work would also involve its Google Business Profile, which is covered in more depth in this <a href="local-seo-audit-checklist.html">local SEO audit checklist</a>.</p>
+
+<h3>Step 6: Note what competitors do</h3>
+<p>Reviewing the local bakeries that appear reveals gaps as well as competition. In this scenario, several list flavors and photos but give no guidance on lead times or what affects price, and one has no dedicated custom-cake page at all. Those gaps are chances to be more useful, not wording to copy.</p>
+
+<h3>Step 7: Prioritize and decide</h3>
+<p>Putting every factor side by side makes the decision, and the reasons behind it, explicit:</p>
+<div class="table-wrap">
+<table>
+<caption>Illustrative ratings for a hypothetical business &mdash; not live tool data.</caption>
+<thead>
+<tr><th>Keyword</th><th>Intent</th><th>Relevance</th><th>Demand</th><th>Competition</th><th>SERP opportunity</th><th>Business value</th><th>Decision</th></tr>
+</thead>
+<tbody>
+<tr><td>custom birthday cakes [city]</td><td>Transactional, local</td><td>High</td><td>Low&ndash;medium</td><td>Medium</td><td>Local service pages rank</td><td>High</td><td>Target first with the main service page</td></tr>
+<tr><td>how far in advance to order a custom cake</td><td>Informational</td><td>High</td><td>Low</td><td>Low</td><td>Short answers and FAQs rank</td><td>Medium</td><td>Answer on the service page</td></tr>
+<tr><td>custom cake prices</td><td>Commercial investigation</td><td>High</td><td>Medium</td><td>Medium&ndash;high</td><td>Mix of local pages and national guides</td><td>High</td><td>Create a local pricing page next</td></tr>
+<tr><td>how to make a fondant cake at home</td><td>Informational (DIY)</td><td>Low</td><td>High</td><td>High</td><td>Recipe sites and videos</td><td>Low</td><td>Reject &mdash; wrong intent</td></tr>
+<tr><td>cake</td><td>Mixed / unclear</td><td>Low</td><td>Very high</td><td>Very high</td><td>Broad, established results</td><td>Low</td><td>Reject &mdash; too broad</td></tr>
+</tbody>
+</table>
+</div>
+<p>The final decision is to build the service page around "custom birthday cakes [city]," answer the lead-time question on that same page because it serves the same visitor, and plan a separate pricing page. The two rejected keywords aren't "bad" keywords; they simply don't serve this business's goal. A recipe blog looking at the same list would reach almost the opposite conclusion, which is exactly why keyword research starts with the goal rather than the numbers.</p>
+
 <h2>What Is Keyword Clustering?</h2>
 <p>Keyword clustering is the practice of grouping closely related keywords together so they can be addressed by a single, more comprehensive page rather than scattered across many thin, overlapping ones. Keywords tend to belong in the same cluster when they reflect essentially the same search intent and when their search results substantially overlap -- meaning the same pages tend to rank for all of them.</p>
 <p>Clustering matters because creating a separate page for every minor keyword variation usually backfires. It spreads your effort thin, creates pages that compete with each other for the same searches, and rarely produces the kind of comprehensive, authoritative content that both readers and search engines tend to favor. Grouping "what is keyword research," "keyword research meaning," and "keyword research definition" under one well-developed page, for instance, generally makes more sense than writing three separate, thinner articles that all say roughly the same thing. That said, clustering isn't an absolute rule. Some keywords that look similar on the surface actually reflect different intents or deserve their own dedicated page, so it's worth checking the SERP overlap rather than assuming every similar-looking phrase belongs together.</p>
@@ -212,6 +289,17 @@
 
 <img src="../assets/images/blog/keyword-to-content-mapping.png" alt="Diagram showing a primary keyword branching into supporting keywords and related questions, which come together on one comprehensive page" loading="lazy" width="1515" height="1252" />
 
+<h2>What Is Keyword Cannibalization?</h2>
+<p>Keyword cannibalization happens when two or more pages on the same site target substantially the same search intent. Instead of one strong answer, the site offers several partial ones, and it becomes unclear which page should appear for a given search. It often builds up gradually, for example when a site publishes "how to choose running shoes" and, months later, "running shoe buying tips," and both end up saying largely the same thing.</p>
+<p>Not every overlap is a problem. Two pages can share some of the same words while serving different intents, such as a buying guide and a product page. To check, filter Google Search Console's Performance report by the query, open the Pages tab to see which URLs receive impressions for it, and compare what each page is actually for.</p>
+<p>When two pages genuinely overlap, there are three common options:</p>
+<ul>
+<li><strong>Differentiate</strong> them so each clearly serves a distinct need, adjusting the focus, headings, and internal links of each.</li>
+<li><strong>Consolidate</strong> them into one stronger page and point the old URL to it with a <a href="what-is-technical-seo.html">301 redirect</a>.</li>
+<li><strong>Assign different intents</strong>, so one page covers the informational side of the topic and the other the commercial or transactional side.</li>
+</ul>
+<p>Mapping keywords to pages before publishing, covered below, is the simplest way to prevent the problem in the first place.</p>
+
 <h2>How Does Competitor Research Help With Keyword Research?</h2>
 <p>Looking at what's currently ranking for your target keywords is a useful part of the research process, separate from the SERP-analysis habit covered earlier. Competitor research at the keyword-research stage can reveal which topics competitors are covering that you aren't, which keywords they appear to be ranking for, gaps in the market where nobody has produced a genuinely strong resource yet, what searchers in your space seem to expect based on how existing results are structured, and which content formats -- long guides, tools, comparison pages, video -- tend to perform well for a given topic.</p>
 <p>The purpose here is understanding the competitive landscape and spotting real opportunities, not copying what's already out there. A competitor's existing article tells you a topic is worth covering; it doesn't tell you how to cover it well, and reproducing their structure or wording closely tends to produce a weaker, derivative version of something that already exists rather than something genuinely more useful.</p>
@@ -222,16 +310,44 @@
 <p>Other useful sources include searches performed on your own website, the language customers use in reviews, comments on your content or social posts, and discussions in relevant online communities.</p>
 <p>This kind of information matters because keyword databases are built from aggregated search behavior across the entire web, and they can miss the specific, sometimes unconventional language your actual audience uses, along with problems that are common in your specific niche but too small in volume to register clearly in a general-purpose tool. Combining first-party insight with tool-based data tends to produce a more grounded, realistic picture than either source alone.</p>
 
+<h2>How Do You Use Search Console Data on an Existing Website?</h2>
+<p>If your site already receives search impressions, the best starting point is often the data you already have. Google Search Console shows the actual queries for which Google has displayed your pages, something no third-party tool can reproduce exactly. A practical workflow:</p>
+<ol>
+<li><strong>Open the Performance report</strong> and select "Search results."</li>
+<li><strong>Turn on all four metrics:</strong> clicks, impressions, average CTR, and average position.</li>
+<li><strong>Filter to one page</strong> and open the Queries tab to see the queries that page appears for.</li>
+<li><strong>Look for patterns.</strong> Queries with many impressions but a weak average position often point to topics the page mentions without answering well. Queries with a good position but a low CTR can suggest the title or snippet doesn't match what searchers expect. Queries that don't fit the page at all may deserve a different page.</li>
+<li><strong>Decide on an action:</strong> expand a thin section, add a missing subtopic, answer a recurring question, improve the title and description, or plan a new page for a distinct intent.</li>
+<li><strong>Recheck after a few weeks</strong> to see how impressions, position, and clicks have changed.</li>
+</ol>
+<p>Keep a few limits in mind. Average position is averaged across every time a page appeared, so it can hide wide variation. Search Console also leaves out some rare queries to protect user privacy, so the list is never complete. And appearing for a query shows an opportunity, not a promise that improving the page will earn clicks or higher rankings.</p>
+
 <h2>How Do You Turn Keyword Research Into Content Strategy?</h2>
 <p>Keyword research only creates value when it shapes what gets built. The path from research to a useful page generally follows a consistent sequence.</p>
 <p>Research surfaces keyword candidates. Evaluation narrows the list to the strongest options. Intent analysis determines what type of content each keyword needs. Clustering groups related keywords under shared topics. Content mapping decides which page should address each cluster.</p>
 <p>Content creation then produces the page, while <a href="what-is-on-page-seo.html">on-page optimization</a> helps make the content useful for readers and search engines. Measurement tracks performance after publication, and updating keeps the research and content relevant as circumstances change.</p>
+<p>Continuing the bakery example from earlier, a simple keyword map turns the keyword decisions into page assignments:</p>
+<div class="table-wrap">
+<table>
+<caption>Illustrative keyword map for a hypothetical business.</caption>
+<thead>
+<tr><th>Target page</th><th>Primary keyword</th><th>Supporting keywords</th><th>Related questions</th><th>Search intent</th><th>Content purpose</th></tr>
+</thead>
+<tbody>
+<tr><td>Custom cakes service page</td><td>custom birthday cakes [city]</td><td>custom celebration cakes, order a birthday cake [city]</td><td>How far in advance should I order? Can you cater for dietary needs?</td><td>Transactional, local</td><td>Show cake options, lead times, and how to place an order</td></tr>
+<tr><td>Pricing page</td><td>custom cake prices</td><td>custom cake cost, tiered cake price</td><td>What affects the price? Is delivery included?</td><td>Commercial investigation</td><td>Explain typical price ranges and what changes the cost</td></tr>
+</tbody>
+</table>
+</div>
+<p>Each page has one clear job, and no two pages are built around the same intent.</p>
 <p>In practice, a strong keyword strategy should influence several concrete decisions: which new pages are worth creating, which topics deserve priority given limited time and resources, what type of content best fits a given topic and intent, which existing pages might already be a reasonable home for a keyword, and which related topics make more sense grouped together on one comprehensive page.</p>
 <p>Treated this way, keyword research stops being a standalone exercise and becomes the foundation that the rest of a content plan is built on.</p>
 
 <h2>Keyword Research in Modern Search</h2>
 <p>Search itself keeps evolving, and it's worth understanding how that affects keyword research without treating this as a separate topic from the rest of the guide. AI-generated overviews now appear directly on many search results pages, summarizing an answer before a searcher ever reaches a traditional organic listing. Search behavior is shifting toward longer, more conversational, natural-language queries -- closer to how someone would actually phrase a question out loud than the clipped, keyword-style phrasing common in earlier years. Search itself increasingly happens outside a traditional search engine entirely, through AI chat assistants, voice search, and platform-specific search bars.</p>
 <p>None of this changes the core logic of keyword research -- understanding what people are looking for and why is still the foundation. What it does mean is that keyword research increasingly benefits from considering natural, question-based phrasing alongside shorter, more traditional keywords, and from recognizing that a strong, clear, genuinely useful answer to a topic matters across all of these surfaces, not just classic web search.</p>
+<p>A simple comparison shows the difference. A traditional query might be just "keyword research." A conversational version of a related need might be "How do I find keywords for a new website with little authority?"</p>
+<p>The short query names a topic but reveals almost nothing about the person. The conversational one reveals a lot: the searcher is a beginner, the site is new, and they're worried about competing with established websites. The topic is the same, but the useful answer is narrower: focus on specific phrases with less competition, check the SERP for smaller sites that already rank, and lean on real customer questions instead of broad head terms. A query like this often doesn't need its own page. It signals that a thorough page on the broader topic should include a clear, direct answer for that situation. For how this relates to AI-generated results specifically, see this guide to <a href="google-ai-overviews-seo-strategies.html">showing up in Google AI Overviews</a>.</p>
 <p>It's worth being cautious here about overclaiming: exactly how any specific AI system selects, weighs, or summarizes content isn't something that can be stated with confidence, and this guide isn't the place to speculate about the internal mechanics of any particular platform. The safer, more durable approach is the same one that's always worked reasonably well -- understanding real audience questions and answering them clearly.</p>
 
 <h2>How Often Should Keyword Research Be Updated?</h2>
@@ -262,9 +378,30 @@
 <li>Could SERP features meaningfully reduce organic clicks?</li>
 <li>Should this keyword have its own dedicated page, or does it belong with others?</li>
 <li>Does it fit into an existing keyword cluster?</li>
+<li>Would it compete with a page you already have?</li>
 <li>Can genuinely useful, well-researched content actually be created for this query?</li>
 <li>Should this keyword be revisited and reviewed again later?</li>
 </ul>
+<p>To record the answers, a worksheet with one row per keyword is enough. You can recreate it in any spreadsheet using these columns:</p>
+<div class="table-wrap">
+<table>
+<caption>Keyword research worksheet template.</caption>
+<thead>
+<tr><th>Column</th><th>What to record</th></tr>
+</thead>
+<tbody>
+<tr><td>Keyword</td><td>The exact phrase being considered</td></tr>
+<tr><td>Intent</td><td>Informational, navigational, commercial, or transactional, based on the SERP</td></tr>
+<tr><td>Relevance</td><td>How closely it fits your business or site: high, medium, or low</td></tr>
+<tr><td>Demand</td><td>The estimated volume from your tool, or a note that none is shown</td></tr>
+<tr><td>Competition</td><td>The difficulty score and which tool it came from, plus your own read of the SERP</td></tr>
+<tr><td>SERP observations</td><td>The page types that rank, notable SERP features, and who dominates</td></tr>
+<tr><td>Business value</td><td>Whether a visitor from this search could realistically become a customer or lead</td></tr>
+<tr><td>Priority</td><td>Target now, target later, or reject</td></tr>
+<tr><td>Target page</td><td>The existing or planned URL that will cover it</td></tr>
+</tbody>
+</table>
+</div>
 
 <h2>Conclusion</h2>
 <p>Keyword research is ultimately about understanding people -- what they're searching for, why they're searching for it, and what would genuinely be useful to them once they arrive. The goal was never to build the longest possible keyword list. It's to identify search demand that's actually relevant to your business, understand the intent behind it, realistically evaluate the opportunity, and use everything you learn to guide content that's worth creating.</p>

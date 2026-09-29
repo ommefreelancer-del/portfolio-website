@@ -41,7 +41,7 @@ const blogPosts = [
     category: "Keyword Research",
     tags: ["keyword-research", "seo-strategy", "content-strategy"],
     date: "2026-09-09",
-    readTime: "30 min read"
+    readTime: "39 min read"
   },
   {
     slug: "what-is-on-page-seo",
