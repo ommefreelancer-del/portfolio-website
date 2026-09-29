@@ -68,7 +68,7 @@ const blogPosts = [
     category: "Technical SEO",
     tags: ["technical-seo", "site-audit", "crawlability"],
     date: "2026-09-09",
-    readTime: "15 min read"
+    readTime: "20 min read"
   },
   {
     slug: "local-seo-audit-checklist",
