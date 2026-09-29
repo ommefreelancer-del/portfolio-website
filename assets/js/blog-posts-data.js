@@ -77,7 +77,7 @@ const blogPosts = [
     category: "Local SEO",
     tags: ["local-seo", "seo-audit", "small-business-seo"],
     date: "2026-09-16",
-    readTime: "12 min read"
+    readTime: "23 min read"
   },
   {
     slug: "google-ai-overviews-seo-strategies",

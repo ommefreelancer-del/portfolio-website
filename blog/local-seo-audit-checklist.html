@@ -22,6 +22,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.prose .table-wrap { overflow-x: auto; margin: 8px 0 28px; }
+.prose .audit-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; color: var(--text-secondary); }
+.prose .audit-table th, .prose .audit-table td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.6; }
+.prose .audit-table th { background: var(--bg); color: var(--secondary); font-weight: 600; }
+.prose .audit-table caption { caption-side: bottom; font-size: 0.85rem; padding-top: 8px; text-align: left; }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,7 +44,7 @@
         "url": "https://ommefreelancer-del.github.io/portfolio-website/"
       },
       "datePublished": "2026-09-16",
-      "dateModified": "2026-09-16",
+      "dateModified": "2026-09-29",
       "mainEntityOfPage": "https://ommefreelancer-del.github.io/portfolio-website/blog/local-seo-audit-checklist.html"
     },
     {
@@ -89,7 +96,7 @@
   <div class="post-meta-row">
     <span class="post-category">Local SEO</span>
     <span>September 16, 2026</span>
-    <span>12 min read</span>
+    <span>23 min read</span>
   </div>
 
   <h1>Local SEO Audit Checklist: 15 Steps to Improve Your Google Rankings</h1>
@@ -106,55 +113,127 @@
 
   <img src="../assets/images/blog/local-seo-audit-framework.png" alt="Local SEO audit framework showing Google Business Profile, website, keywords, reviews, citations, content, technical SEO, and backlinks" loading="lazy" width="3200" height="2040" />
 
+  <h2>How to Do a Local SEO Audit</h2>
+  <p>The 15 checks below tell you what to review. The process around them is what turns a checklist into an audit you can act on:</p>
+  <ol>
+    <li><strong>Prepare.</strong> Get access to the Google Business Profile and Google Search Console, write down the business's exact name, address, and phone number, and choose a small set of target searches, usually your main services combined with the towns or neighborhoods you serve.</li>
+    <li><strong>Audit.</strong> Work through the 15 areas in order. The early checks, such as your profile and business details, affect how you interpret the later ones.</li>
+    <li><strong>Collect evidence.</strong> For each check, save what you actually saw, such as a screenshot, a URL, and the date, rather than relying on memory.</li>
+    <li><strong>Identify issues.</strong> Mark each area as pass, needs work, or fail in the scorecard.</li>
+    <li><strong>Assign priority.</strong> Decide what to fix first using the tiers in Step 15.</li>
+    <li><strong>Implement fixes.</strong> Work through the highest-priority items, and note who is responsible for each one.</li>
+    <li><strong>Re-check.</strong> Confirm each fix is actually live, for example that a directory listing now shows the correct phone number.</li>
+    <li><strong>Monitor.</strong> Revisit your target searches, reviews, and Search Console data over the following months.</li>
+  </ol>
+  <p>A note on checking search results: local results change with the searcher's location, and Google says its local ranking considers distance alongside relevance and prominence. Check from within the area you serve, and treat what you see as a dated snapshot rather than a fixed ranking.</p>
+
   <h2>Local SEO Audit Checklist: 15 Essential Steps</h2>
 
   <h3>1. Google Business Profile</h3>
-  <p>Your Google Business Profile (GBP) is one of the most important elements to review in a local SEO audit, because it's what actually appears in the Map Pack. Check that your primary and secondary categories accurately describe what you do, your business hours are current (including holiday hours), your service areas are set correctly if you don't have a walk-in location, and you have a steady flow of recent photos rather than a handful uploaded once at setup. Check whether you're using GBP posts and the Q&amp;A section, and whether questions from customers are actually being answered. A profile that was set up once and never touched again is a common, fixable gap.</p>
+  <p>Your Google Business Profile (GBP) is one of the most important elements to review in a local SEO audit, because it's what actually appears in the Map Pack. Check that your primary and secondary categories accurately describe what you do, your business hours are current (including holiday hours), your service areas are set correctly if you don't have a walk-in location, and you have a steady flow of recent photos rather than a handful uploaded once at setup. Check whether you're using GBP posts and the Q&amp;A section where it's available, and whether questions from customers are actually being answered. A profile that was set up once and never touched again is a common, fixable gap.</p>
+  <p><strong>How to check:</strong> Open the profile from your Business Profile dashboard, then look at it the way a customer would by searching the business name in Google Search and Maps. Work through each field:</p>
+  <ul>
+    <li><strong>Business name:</strong> matches the real-world name on your signage and website. Google's guidelines don't allow added keywords or locations in the name.</li>
+    <li><strong>Primary category:</strong> the most specific category for what the business is. Additional categories should cover other core services only; Google recommends using as few as possible.</li>
+    <li><strong>Address or service area:</strong> a storefront address customers can visit or, for businesses that travel to customers, a service area with the address hidden.</li>
+    <li><strong>Hours:</strong> regular hours match reality, and special hours are set for upcoming holidays.</li>
+    <li><strong>Description, services, and products:</strong> filled in where your category offers them, accurate, and consistent with the website.</li>
+    <li><strong>Photos:</strong> show the actual premises, team, or work, and include recent uploads.</li>
+    <li><strong>Customer questions:</strong> if your profile shows a questions section, look for unanswered or outdated answers.</li>
+  </ul>
+  <p><strong>Record</strong> a screenshot of the profile and a list of missing or inaccurate fields. <strong>Pass</strong> means every relevant field is complete and accurate. <strong>Needs work</strong> means minor gaps, such as missing special hours or old photos. <strong>Fail</strong> means the profile is unclaimed or unverified, uses the wrong primary category, or shows wrong contact details. Google says local results are based mainly on relevance, distance, and prominence, and that complete, accurate information helps it match your profile to searches. No single field guarantees a better position, and there is no way to pay for one.</p>
 
   <h3>2. Business Name, Address, and Phone Consistency (NAP)</h3>
   <p>Search this exact combination of your business name, address, and phone number across your website, GBP, and the major directories you're listed on (Yelp, Bing Places, Facebook, industry-specific directories). Even small inconsistencies &mdash; a suite number dropped, &quot;St.&quot; vs. &quot;Street,&quot; an old phone number still live on one directory &mdash; make your business look less consistent and less trustworthy to both customers and the platforms trying to verify who you are. It's tedious to check manually, but it's one of the more straightforward items on this list to fix, because it's binary: either your information matches everywhere, or it doesn't.</p>
+  <p><strong>How to check:</strong> Write down your correct NAP exactly as it should appear, then compare it field by field against your website footer and contact page, your Google Business Profile, and each directory listing you find. Searching your phone number, and your business name in quotes, helps surface old listings you've forgotten about. <strong>Record</strong> each source, the name, address, and phone it shows, and whether it matches. Wrong phone numbers and old addresses are the most urgent to correct; formatting differences such as &quot;St.&quot; versus &quot;Street&quot; are worth tidying but less urgent.</p>
 
   <h3>3. Local Keyword Targeting</h3>
   <p>Local keyword targeting is <a href="what-is-keyword-research.html">keyword research</a> narrowed to how nearby customers actually search. Look at the actual pages on your site and ask whether they target real search terms your customers use &mdash; the &quot;[service] + [city/neighborhood]&quot; pattern, plus how people actually phrase the problem you solve (&quot;emergency plumber,&quot; not just &quot;plumbing services&quot;). A common finding here is a site that's technically about the right topics but never uses the specific language and locations customers search for, so it never matches the query.</p>
+  <p><strong>How to check:</strong> List the service-and-location searches that matter most to the business, then identify which page on your site is meant to answer each one. <strong>Record</strong> the search, the intended page, and whether that page's title, H1, and content naturally use that service and location. A search with no matching page, or with several pages competing for it, needs work.</p>
 
   <h3>4. Service Pages</h3>
   <p>Each core service should have its own dedicated page rather than being buried in a single &quot;Services&quot; page or, worse, only mentioned on the homepage. A dedicated page lets you go deep on that one service, target the specific keywords around it, and give Google (and customers) a clear, relevant page to send people to instead of a generic overview.</p>
+  <p><strong>How to check:</strong> Compare the list of services you actually offer with the pages on your site. <strong>Pass</strong> means each core service has a dedicated page explaining what it involves, who it's for, and how to book or request a quote. <strong>Needs work</strong> means a page exists but is only a few thin sentences. <strong>Fail</strong> means an important service has no page at all.</p>
 
   <h3>5. Location Pages</h3>
   <p>If you serve more than one city, neighborhood, or region, a dedicated page for a given location is worth creating only when you can fill it with genuinely useful, distinct information for that specific area &mdash; which services you offer there, real location-specific details, or local context that actually helps someone from that area. A page that's just your standard template with the city name swapped in (a &quot;doorway&quot; page) isn't useful to anyone. Thin, duplicated location pages are one of the more common local SEO mistakes, and they can do more harm than having no location pages at all. If you can't say something genuinely different about a location yet, it doesn't need its own page.</p>
+  <p><strong>How to check:</strong> For each existing or planned location page, ask what a reader in that area would learn that they couldn't get from any other page on the site, and sort the page into one of these groups:</p>
+  <ul>
+    <li><strong>Genuinely useful:</strong> specific details for that area, such as a branch's address and directions, which services are available there, local staff, or projects completed nearby.</li>
+    <li><strong>Useful service-and-location pages:</strong> a page such as &quot;boiler repair in [town]&quot; is justified only when the service genuinely operates there and the page has specific information to offer.</li>
+    <li><strong>Thin city-name swaps:</strong> near-identical pages where only the place name changes.</li>
+    <li><strong>Doorway-like pages:</strong> sets of pages created mainly to rank for similar city searches and funnel visitors to one destination. Google's spam policies name this pattern specifically.</li>
+  </ul>
+  <p><strong>Record</strong> each location page and its group. Thin or doorway-like pages should be improved with real local detail, merged, or removed, not multiplied.</p>
 
   <h3>6. On-Page SEO</h3>
   <p>Check title tags, H1s, meta descriptions, and body content on your key pages for basic optimization: does the title tag reflect the service and location, is there one clear H1, is the content long enough to actually be useful, and is it structured with headers rather than one dense block of text. This is standard <a href="what-is-on-page-seo.html">on-page SEO</a> hygiene, but it's foundational &mdash; the other 14 items on this list matter less if the pages themselves aren't built correctly.</p>
+  <p><strong>How to check:</strong> View the title tag and meta description of each key service and location page; a free site crawler can list them for the whole site at once. <strong>Record</strong> missing, duplicated, or generic titles, pages with no H1 or several competing H1s, and pages whose content never mentions the area served.</p>
 
   <h3>7. Customer Reviews</h3>
   <p>Look at review volume, average rating, how recent your reviews are, and &mdash; importantly &mdash; whether you're responding to them, positive and negative alike. A business with 40 reviews from three years ago sends a different signal than one with a steady trickle of recent reviews and visible owner responses. Note which review platforms matter most in your industry (Google is usually primary, but industry-specific platforms often matter too).</p>
+  <p><strong>How to check:</strong> On your Business Profile, and on any industry platform that matters in your sector, note the total number of reviews, the average rating, the date of the most recent review, roughly how many arrived in the last few months, and what share have an owner response. Read recent negative reviews for recurring themes, since they often point to real service issues. <strong>Needs work</strong> usually means reviews have stalled or responses are missing. The fix is a consistent, honest process for asking every customer for feedback and replying to reviews, positive and negative. Don't offer discounts or rewards for reviews, and don't ask only customers you expect to be happy; Google's review policies prohibit both.</p>
 
   <h3>8. Local Citations</h3>
   <p>Citations are mentions of your business &mdash; usually your NAP data &mdash; on other websites: directories, chambers of commerce, industry associations, local news mentions. Audit which major citation sources you're on, whether the information matches (see #2), and where there are obvious gaps compared to what's realistic for your industry and area.</p>
+  <p><strong>How to check:</strong> Start with the platforms that matter for your type of business: general ones such as Bing Places, Apple Business Connect, and Facebook, plus the main directories and associations in your industry and area. For each, compare the business name, address, phone number, website URL, hours, and category with your correct NAP. <strong>Record</strong> the platform, whether a listing exists, and any mismatches. Correcting inaccurate listings on platforms customers actually use comes before creating new ones. There is no fixed number of citations a business needs, and listing on every directory you can find is not the goal.</p>
 
   <h3>9. Local Content</h3>
   <p>Beyond your service and location pages, does your site have any content that speaks specifically to the community you serve &mdash; local guides, event participation, community involvement, locally-relevant FAQs? This is the kind of content that reflects genuine local relevance &mdash; not a generic template with a city name inserted into it.</p>
+  <p><strong>How to check:</strong> Review your blog and resource pages and note which are genuinely tied to the area you serve. Content that answers questions local customers actually ask, such as local permit rules, seasonal problems in your climate, or projects in nearby neighborhoods, counts. Generic articles with a city name added don't.</p>
 
   <h3>10. Internal Linking</h3>
   <p>Check whether your service pages, location pages, and blog content link to each other in a sensible way. A visitor (and a search engine crawler) landing on one service page should be able to find related services and relevant locations without hunting through the main navigation. Isolated pages with no internal links pointing to them are much harder for both users and Google to find valuable.</p>
+  <p><strong>How to check:</strong> A free site crawler can show how many internal links point to each page. <strong>Record</strong> service and location pages with few or no internal links, then add links from related services, relevant blog posts, and the navigation where it genuinely helps visitors.</p>
 
   <h3>11. Technical SEO</h3>
-  <p>Confirm the basics: the site loads reasonably quickly, it works properly on mobile (where most local searches happen), important pages are actually indexed in Google Search Console, and there's nothing accidentally blocking search engines from crawling key pages. This overlaps with a general <a href="what-is-technical-seo.html">technical SEO</a> audit, but it's worth re-checking specifically on your service and location pages, since those are often added later and can be missed by earlier technical work.</p>
+  <p>Confirm the basics: the site loads reasonably quickly, it works properly on mobile devices, important pages are actually indexed in Google Search Console, and there's nothing accidentally blocking search engines from crawling key pages. This overlaps with a general <a href="what-is-technical-seo.html">technical SEO</a> audit, but it's worth re-checking specifically on your service and location pages, since those are often added later and can be missed by earlier technical work.</p>
+  <p><strong>How to check:</strong> In Google Search Console, use URL Inspection on each important service and location page to confirm it's indexed, and review the Core Web Vitals report. Open the pages on a phone and test click-to-call links and contact forms. A key page that isn't indexed is a <strong>fail</strong> and a top-priority fix.</p>
 
   <h3>12. LocalBusiness Structured Data</h3>
   <p>Check whether your site has <code>LocalBusiness</code> schema markup implemented, and whether the information in that markup &mdash; name, address, phone, hours, service area &mdash; actually matches what's live on the page and on your Google Business Profile. Structured data doesn't guarantee a ranking boost or a rich result in Google &mdash; Google decides independently whether and how to use it &mdash; but accurate markup helps Google understand your business information correctly, and may make certain search features possible. Make sure the business type is correct, the markup matches your visible page content, and you validate it before publishing; outdated, missing, or mismatched structured data is a quiet, easy-to-overlook gap.</p>
+  <p><strong>How to check:</strong> Test each relevant page with Google's Rich Results Test or the Schema Markup Validator, then compare the name, address, phone, and hours in the markup with the visible page and your Business Profile. <strong>Record</strong> errors, warnings, and mismatches. Only mark up information that is true and visible on the page; never add ratings or details that don't exist.</p>
 
   <h3>13. Local Backlinks</h3>
-  <p>Look at where your backlinks are coming from. This is part of the broader <a href="what-is-off-page-seo.html">off-page SEO and backlinks</a> picture, but for local SEO specifically, links from local, relevant, and legitimate sources carry extra weight: local news coverage, chamber of commerce or business association listings, sponsorships, partnerships with other local businesses, and guest content on locally-relevant publications. What matters here is quality and relevance, not raw link count &mdash; a handful of genuine local links outweighs a large batch of generic or purchased ones. Link schemes, paid placements aimed at manipulating rankings, and mass guest-post campaigns aren't part of a sustainable local SEO strategy. A backlink profile made up entirely of generic, non-local links is a common, and fixable, gap for small businesses.</p>
+  <p>Look at where your backlinks are coming from. This is part of the broader <a href="what-is-off-page-seo.html">off-page SEO and backlinks</a> picture, but for local SEO specifically, links from local, relevant, and legitimate sources are the ones worth looking for: local news coverage, chamber of commerce or business association listings, sponsorships, partnerships with other local businesses, and guest content on locally-relevant publications. What matters here is quality and relevance, not raw link count. Link schemes, paid placements aimed at manipulating rankings, and mass guest-post campaigns aren't part of a sustainable local SEO strategy. A backlink profile made up entirely of generic, non-local links is a common, and fixable, gap for small businesses.</p>
+  <p><strong>How to check:</strong> The Links report in Google Search Console lists the sites linking to you, and a backlink tool can add detail. <strong>Record</strong> which referring sites are local or relevant to your industry, and which look spammy or unrelated. Practical local opportunities usually come from real relationships: coverage in a local publication, a member listing with your chamber of commerce or business association, legitimate partnerships with suppliers or complementary businesses, sponsorship of local teams or events, and community organizations you already support. Each link should exist because the relationship is real, not because it was bought.</p>
 
   <h3>14. Local Competitor Analysis</h3>
   <p>Search your core &quot;[service] + [city]&quot; terms yourself and look at who's actually showing up in both the Map Pack and the top local organic results. What do they have that you don't &mdash; more reviews, more complete profiles, location pages you haven't built, backlinks from sources you're not on? Reviewing this won't guarantee you'll outrank them, but it turns the previous 13 items into a concrete comparison instead of an abstract checklist.</p>
+  <p><strong>How to check:</strong> Use the same target searches you chose for Step 3. Search each one from within your service area and note which businesses appear in the map results and the top organic results. Pick two or three competitors that appear repeatedly, then compare them with your own business using a framework like this:</p>
+  <div class="table-wrap">
+  <table class="audit-table">
+    <caption>A comparison framework. Fill it in with what you actually observe, and don't assume a competitor is stronger in an area you haven't checked.</caption>
+    <thead>
+      <tr><th>Factor</th><th>What to compare</th><th>Where to look</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Search visibility</td><td>Which of your target searches each business appears for, in the map results and organic results</td><td>Google Search and Maps, from within your area</td></tr>
+      <tr><td>Business Profile</td><td>Category choice, completeness of fields, photo freshness, and services listed</td><td>Each business's profile</td></tr>
+      <tr><td>Reviews</td><td>Number, recency, average rating, and whether the owner responds</td><td>Business Profile and relevant industry platforms</td></tr>
+      <tr><td>Service and location pages</td><td>Whether each core service and area served has a dedicated, useful page</td><td>Their website</td></tr>
+      <tr><td>Local content</td><td>Area-specific guides, project write-ups, or FAQs</td><td>Their blog and resource pages</td></tr>
+      <tr><td>Citations</td><td>Presence and accuracy on the main directories for your industry</td><td>Directory searches for their business name</td></tr>
+      <tr><td>Local links</td><td>Mentions from local publications, associations, or partners</td><td>A backlink tool, or a search for their name in quotes</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>Record</strong> what each competitor has that you don't, and treat each difference as a candidate action for Step 15, not a guaranteed ranking fix.</p>
 
   <h3>15. Prioritized Local SEO Action Plan</h3>
-  <p>Once you've worked through the first 14 areas, the last step is turning your findings into an ordered list: what has the biggest realistic impact on rankings and is easy to fix (do this first), what's high-impact but will take longer (plan for it), and what's lower priority for now. An audit without this step is just a list of problems &mdash; this step is what actually moves the needle.</p>
+  <p>Once you've worked through the first 14 areas, the last step is turning your findings into an ordered list: what is likely to have the most impact and is easy to fix (do this first), what's high-impact but will take longer (plan for it), and what's lower priority for now. An audit without this step is just a list of problems &mdash; this step is what actually moves the needle.</p>
+  <p>A practical way to order findings is to group them into tiers, judging each one by the evidence you recorded, how much it could affect customers or local visibility, how relevant it is to your core services, and how much effort it takes:</p>
+  <ul>
+    <li><strong>Foundational problems:</strong> issues that can keep you from appearing or mislead customers, such as an unverified profile, a wrong phone number, or key pages that aren't indexed. Fix these first.</li>
+    <li><strong>High-impact structural and content problems:</strong> missing service pages, thin or duplicated location pages, and pages that don't target the searches you rely on.</li>
+    <li><strong>Trust and authority opportunities:</strong> review volume and responses, citation gaps on important platforms, and relevant local links.</li>
+    <li><strong>Lower-priority improvements:</strong> useful refinements such as extra photos, secondary directories, or minor on-page adjustments.</li>
+    <li><strong>Monitoring and re-check items:</strong> things to watch rather than fix now, such as competitor activity, review flow, and your visibility for target searches.</li>
+  </ul>
+  <p>These tiers are a starting point, not a fixed ranking of factors. A finding can move up or down depending on what the evidence shows for your business.</p>
 
   <h2>Local SEO Audit Scorecard</h2>
-  <p>Use this as a working tracker while you go through the checklist above. Rate each area honestly &mdash; the goal is an accurate starting point, not a perfect score.</p>
+  <p>Use this as a working tracker while you go through the checklist above. Rate each area honestly &mdash; the goal is an accurate starting point, not a perfect score. In the last column, note the evidence behind each rating and the next action it leads to.</p>
 
   <div style="overflow-x:auto; margin: 8px 0 28px;">
   <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
@@ -164,7 +243,7 @@
         <th style="text-align:left; padding:10px 12px; border:1px solid #E2E8F0; color:#0F172A;">Audit Area</th>
         <th style="text-align:left; padding:10px 12px; border:1px solid #E2E8F0; color:#0F172A;">Status (Pass / Needs Work / Fail)</th>
         <th style="text-align:left; padding:10px 12px; border:1px solid #E2E8F0; color:#0F172A;">Priority (High / Medium / Low)</th>
-        <th style="text-align:left; padding:10px 12px; border:1px solid #E2E8F0; color:#0F172A;">Notes</th>
+        <th style="text-align:left; padding:10px 12px; border:1px solid #E2E8F0; color:#0F172A;">Evidence &amp; Next Action</th>
       </tr>
     </thead>
     <tbody>
@@ -187,13 +266,32 @@
   </table>
   </div>
 
+  <p>For findings that need more detail than a single cell, write each one up in a consistent format. The example below shows how.</p>
+  <p><strong>Illustrative example &mdash; not a real business or audit.</strong></p>
+  <div class="table-wrap">
+  <table class="audit-table">
+    <caption>How one audit finding might be documented. The details are hypothetical.</caption>
+    <thead>
+      <tr><th>Field</th><th>Example entry</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Finding</td><td>The phone number on one major directory listing doesn't match the website or the Business Profile.</td></tr>
+      <tr><td>Evidence</td><td>Screenshots of the directory listing and the website contact page, both taken on the audit date, with the listing URL recorded.</td></tr>
+      <tr><td>Status</td><td>Fail (Step 2, NAP consistency)</td></tr>
+      <tr><td>Priority</td><td>Foundational: customers using that listing could call a number that no longer works.</td></tr>
+      <tr><td>Recommended action</td><td>Claim or log in to the directory listing and update the phone number to match the website.</td></tr>
+      <tr><td>How to re-check</td><td>After the change is published, revisit the listing to confirm the new number displays, then search the old number in quotes to find any other listings still using it.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
   <img src="../assets/images/blog/local-seo-audit-15-step-checklist.png" alt="15-step local SEO audit checklist for improving local search visibility and rankings" loading="lazy" width="3200" height="2600" />
 
   <h2>How to Improve Local SEO After an Audit</h2>
   <p>Finding the gaps is only half the job. Once your scorecard is filled in, work through it in this order:</p>
   <p><strong>Fix the foundational issues first.</strong> NAP inconsistencies, an incomplete Google Business Profile, and missing or broken structured data are usually the fastest to fix and remove friction from everything else you do afterward.</p>
   <p><strong>Then build out what's structurally missing.</strong> Add the service or location pages that don't exist yet, and fix the thin or duplicated ones. This is more work than the foundational fixes, but it's what actually gives you pages capable of ranking for the terms you want.</p>
-  <p><strong>Then work on trust signals.</strong> A steady cadence of new reviews (and responses to them), plus a handful of genuinely relevant local backlinks, build the credibility that tips a borderline-ranking page into a visible one.</p>
+  <p><strong>Then work on trust signals.</strong> A steady cadence of new reviews (and responses to them), plus a handful of genuinely relevant local backlinks, build the credibility that can help a page that's close to appearing become more visible.</p>
   <p><strong>Re-run the competitor comparison periodically.</strong> What your competitors are doing changes. A quarterly check against the same &quot;[service] + [city]&quot; searches keeps your action plan current instead of static.</p>
 
   <img src="../assets/images/blog/local-seo-audit-improvement-process.png" alt="Local SEO audit improvement process from identifying issues to improving rankings" loading="lazy" width="3200" height="1240" />
@@ -218,6 +316,15 @@
 
   <h3>Why is a local SEO audit important?</h3>
   <p>A local SEO audit helps identify gaps that may limit local visibility. It gives you a clearer picture of what is working, what needs attention, and which improvements should be prioritized first.</p>
+
+  <h3>How do you do a local SEO audit?</h3>
+  <p>Choose a small set of target searches, then review the 15 areas in this checklist in order, recording evidence for each. Mark every area as pass, needs work, or fail, prioritize the findings, fix the foundational issues first, and re-check each fix once it's live.</p>
+
+  <h3>What is a local listing audit?</h3>
+  <p>A local listing audit is a narrower check of your business listings: your Google Business Profile and the directories and other sites where your business details appear. It overlaps with Steps 1, 2, and 8 of this checklist, while a full local SEO audit also covers your website, content, reviews, links, and competitors.</p>
+
+  <h3>How should you document local SEO audit findings?</h3>
+  <p>For each finding, record what you found, the evidence (such as a screenshot or URL, with the date), its status, its priority, the recommended action, and how you'll confirm the fix. The scorecard and the example documented finding above show a simple format.</p>
 
   <h3>What should a local SEO audit include?</h3>
   <p>A thorough audit should review Google Business Profile, local keyword targeting, service and location pages, on-page SEO, reviews, citations, local content, internal linking, technical SEO, structured data, backlinks, and local competitors.</p>
