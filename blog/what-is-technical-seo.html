@@ -37,7 +37,7 @@
         "url": "https://ommefreelancer-del.github.io/portfolio-website/"
       },
       "datePublished": "2026-09-09",
-      "dateModified": "2026-09-09",
+      "dateModified": "2026-09-29",
       "mainEntityOfPage": "https://ommefreelancer-del.github.io/portfolio-website/blog/what-is-technical-seo.html"
     },
     {
@@ -98,6 +98,7 @@
 <p>It doesn't deal with what your content says -- that's the job of on-page SEO. Technical SEO focuses on whether search engines can reach that content, understand the website structure, and load each web page in a way that works well for visitors.</p>
 <p>Think of technical SEO as the plumbing and wiring behind a website. A visitor never sees the pipes, but if they're broken, nothing upstream works properly -- pages may not load, get discovered, or get indexed, no matter how good the writing is.</p>
 <p>At a foundational level, technical SEO covers several connected jobs: letting search engines crawl your site, allowing them to index the pages worth showing in search results, making sure those pages render and load acceptably, and removing structural problems such as broken links, duplicate URLs, and confusing site architecture. These technical SEO basics are accessible to many beginners, although some advanced areas require code or server knowledge.</p>
+<p>Technical SEO does not include choosing topics, doing <a href="what-is-keyword-research.html">keyword research</a>, writing content, or earning backlinks. Those tasks belong to content, on-page, and off-page SEO. Within digital marketing, technical SEO is the part of search optimization that makes the rest of that work visible to search engines in the first place.</p>
 
 <h2>Why Is Technical SEO Important?</h2>
 <p>Content and links matter, but they can't do their job if search engines can't reach or interpret your pages. This is why technical SEO is important: if a page isn't crawled and indexed, it cannot compete in search engine results, regardless of how well it is written or how many quality backlinks point to it.</p>
@@ -120,10 +121,23 @@
 
 <p>All three areas work together. A technically strong website can still have weak content, while an excellent article can struggle if technical problems prevent search engines from accessing or indexing it.</p>
 
-<h2>What Is Included in Technical SEO?</h2>
-<p>A complete technical SEO guide can cover many areas, but they are not all equally urgent. The most useful approach is to understand the main technical SEO elements and prioritize the issues that can prevent important pages from being crawled or indexed.</p>
+<h2>How Search Engines Process a Page</h2>
+<p>Most technical SEO work makes more sense once you know the stages a page moves through before it can appear in Google. Each stage can fail for different reasons, which is why technical SEO problems are diagnosed stage by stage.</p>
+<ol>
+<li><strong>Discovery:</strong> Google learns that a URL exists, usually by following a link from a page it already knows, reading an XML sitemap, or revisiting URLs it has seen before.</li>
+<li><strong>Crawling:</strong> Google's crawler requests the URL and downloads the response. Robots.txt rules, server errors, or very slow responses can prevent or delay this step.</li>
+<li><strong>Rendering:</strong> Google processes the page much like a browser would, including running JavaScript, so it can see content and links that only appear after scripts execute.</li>
+<li><strong>Indexing:</strong> Google analyzes the page, decides which URL is the canonical version among any duplicates, and may store it in its index. Not every crawled page is indexed.</li>
+<li><strong>Ranking and serving:</strong> When someone searches, Google chooses which indexed pages to show and in what order, based on many factors that include relevance and quality, not only technical ones.</li>
+</ol>
 
 <img src="../assets/images/blog/crawling-indexing-search-visibility-process.png" alt="Diagram showing the three-stage process of crawling, indexing, and search visibility that a webpage must pass through to appear in search results." loading="lazy" width="2048" height="816" />
+
+<p>In practice, these stages overlap, and they are not a one-time sequence. Google may render a page some time after first crawling it, recrawl known URLs on its own schedule, and decide not to process some URLs at all. Google states that it does not guarantee it will crawl, index, or serve any page, even when the page follows its guidelines.</p>
+<p>Technical SEO mainly affects the first four stages. It helps make pages eligible to compete in search results; the ranking stage then depends heavily on the content itself and on signals from the wider web.</p>
+
+<h2>What Is Included in Technical SEO?</h2>
+<p>A complete technical SEO guide can cover many areas, but they are not all equally urgent. The most useful approach is to understand the main technical SEO elements and prioritize the issues that can prevent important pages from being crawled or indexed.</p>
 
 <h3>Crawlability</h3>
 <p>Crawlability refers to whether search engine crawlers can reach and read the pages on your website. Search engines discover pages by following links, reading XML sitemaps, and revisiting URLs they already know about.</p>
@@ -136,6 +150,14 @@
 <li>Are not isolated from the rest of the website</li>
 <li>Can be reached within a reasonable number of clicks from the homepage</li>
 </ul>
+<p>Crawling can also be wasted on URLs that should not exist separately. Common causes include:</p>
+<ul>
+<li><strong>Parameter-generated URLs:</strong> filters, sorting options, session IDs, and tracking codes can create many addresses for the same content, such as <code>/shoes?color=black&amp;sort=price</code>.</li>
+<li><strong>Unnecessary URL variations:</strong> the same page may load at HTTP and HTTPS, with and without "www," or with and without a trailing slash.</li>
+<li><strong>Crawl traps:</strong> structures that generate a practically endless number of URLs, such as calendar pages with a "next month" link that never stops or filter combinations that multiply without limit.</li>
+</ul>
+<p>On small websites, these issues are often minor. On large or ecommerce websites, they can make it harder for important pages to be crawled and can create large numbers of duplicate URLs.</p>
+<p>Navigation also matters. Google can reliably follow links written as standard HTML <code>&lt;a&gt;</code> elements with an <code>href</code> attribute, including links that JavaScript adds to the page in that format. It cannot reliably follow "links" that only work through script events, such as a button or <code>&lt;span&gt;</code> that changes the page when clicked but has no real URL. If your menu or pagination works that way, pages that are linked only through it may be difficult to discover.</p>
 
 <h3>Indexability</h3>
 <p>Indexability is different from crawlability. A page can be successfully crawled but still not be included in a search engine's index.</p>
@@ -148,6 +170,13 @@
 <li>Technical settings that prevent important pages from being indexed</li>
 </ul>
 <p>One of the most useful technical SEO basics is checking important pages in Google Search Console after a site migration, redesign, or major structural change.</p>
+<p>The Page indexing report in Search Console groups URLs by status. Two statuses often confuse beginners:</p>
+<ul>
+<li><strong>Discovered &ndash; currently not indexed:</strong> Google knows the URL exists but has not crawled it yet. Google explains that this typically happens when crawling the URL at that time was expected to overload the site, so the crawl was rescheduled. On an individual page this may resolve without action. If it affects many important pages for a long time, review whether they are well linked internally, whether the server responds reliably, and whether the site produces large numbers of low-value URLs that compete for crawling.</li>
+<li><strong>Crawled &ndash; currently not indexed:</strong> Google fetched the page but chose not to index it for now. It may or may not be indexed later, and resubmitting it is not required. It is still worth reviewing whether the page is substantially unique, useful, internally linked, and not a near-duplicate of another URL.</li>
+</ul>
+<p>Neither status has a single cause, and a small number of such URLs is normal on most websites. Focus on important pages, not every listed URL.</p>
+<p>For any specific page, the URL Inspection tool in Search Console shows whether the URL is indexed, when it was last crawled, whether crawling was allowed, and which URL Google selected as canonical. The live test can also show how Google renders the current version of the page.</p>
 
 <h3>Site Architecture and Internal Linking</h3>
 <p>Site architecture describes how the pages of a website are organized and connected. Internal linking creates paths between related pages and helps both visitors and search engines understand the relationship between different sections.</p>
@@ -168,12 +197,22 @@
 <h3>Robots.txt</h3>
 <p>Robots.txt is a text file at the root of a website that provides instructions to search engine crawlers about which areas they should or should not access.</p>
 <p>It can be useful for controlling crawler access to areas such as internal search results or certain parameter-based URLs, but it can also cause serious problems when configured incorrectly.</p>
+<p>Robots.txt controls crawling, not indexing. Google's documentation states that it is not a mechanism for keeping a page out of Google. A URL that is blocked in robots.txt can still be indexed if other pages link to it, in which case it may appear in search results without a description.</p>
+<p>To keep a page out of search results, use a <code>noindex</code> meta tag or HTTP header, or protect the page with a password. Do not combine <code>noindex</code> with a robots.txt block on the same URL: if Google cannot crawl the page, it cannot see the <code>noindex</code> instruction.</p>
 <p>One common mistake is accidentally blocking an entire website or an important section of it. Beginners should review robots.txt after a website launch, migration, redesign, or major technical change.</p>
 
 <h3>Canonical URLs and Duplicate Content</h3>
 <p>A canonical tag helps indicate which version of a page should be treated as the preferred version when multiple URLs contain the same or very similar content.</p>
 <p>Duplicate content occurs when substantially similar content is available through more than one URL. This can happen through product filters, tracking parameters, different URL variations, or other site configurations.</p>
 <p>A proper canonical setup can help search engines understand which URL should be treated as the main version. However, canonicalization should not be used as a shortcut for combining pages that are genuinely different.</p>
+<p>A canonical tag is a signal, not a command. Google considers it alongside other signals, such as redirects, internal links, and sitemap URLs, and may choose a different canonical if those signals disagree. Common mistakes include:</p>
+<ul>
+<li>Pointing the canonical to a URL that redirects elsewhere</li>
+<li>Pointing the canonical to a URL that returns a 404 or another error</li>
+<li>Pointing the canonical to a URL that has a <code>noindex</code> directive</li>
+<li>Sending inconsistent signals, such as listing one URL in the sitemap, linking internally to a second, and naming a third as canonical</li>
+</ul>
+<p>A canonical should normally point to a working, indexable URL that returns a 200 status. To check what Google actually chose, use the URL Inspection tool and compare the "user-declared canonical" with the "Google-selected canonical."</p>
 
 <h3>Page Speed and Core Web Vitals</h3>
 <p>Page speed refers to how quickly a page loads and becomes usable. Core Web Vitals are a set of Google metrics that measure important aspects of page experience.</p>
@@ -183,6 +222,13 @@
 <li>Interaction to Next Paint (INP), which measures responsiveness</li>
 <li>Cumulative Layout Shift (CLS), which measures visual stability</li>
 </ul>
+<p>Google's recommended "good" thresholds are an LCP of 2.5 seconds or less, an INP of 200 milliseconds or less, and a CLS of 0.1 or less. In Search Console, these are assessed at the 75th percentile of real visits, so most visitors, not just the fastest ones, need a good experience.</p>
+<p>It helps to understand the two kinds of performance data:</p>
+<ul>
+<li><strong>Field data</strong> comes from real Chrome users visiting your pages, collected in the Chrome UX Report. The Core Web Vitals report in Search Console and the real-user section of PageSpeed Insights use this data. Low-traffic pages may not have enough visits to show any.</li>
+<li><strong>Lab data</strong> comes from a simulated test of a single page load, such as the Lighthouse test in PageSpeed Insights. It is useful for finding causes and testing fixes, but it does not represent every visitor's device or connection, and it cannot fully measure INP, because INP depends on real user interactions.</li>
+</ul>
+<p>Use field data to decide whether a real problem exists, and lab data to investigate why.</p>
 <p>A slow or unstable web page can create a poor user experience. Page experience can be one factor in search performance, but improving a speed metric does not guarantee a specific ranking result.</p>
 <p>For basic technical optimization, beginners can test important pages using tools such as Google's PageSpeed Insights. Focus first on significant issues, such as oversized images, excessive scripts, or other resources that slow down the page.</p>
 
@@ -198,10 +244,23 @@
 <li>Check for mixed-content warnings</li>
 </ul>
 
-<h3>Redirects and 404 Errors</h3>
-<p>A redirect sends visitors and search engines from one URL to another. A 301 redirect is commonly used when a page has permanently moved.</p>
+<h3>HTTP Status Codes, Redirects, and 404 Errors</h3>
+<p>Every time a browser or crawler requests a URL, the server replies with an HTTP status code. These codes tell search engines whether a page loaded, moved, is missing, or failed.</p>
+<table>
+<thead>
+<tr><th>Status</th><th>What It Means</th><th>What to Watch For</th></tr>
+</thead>
+<tbody>
+<tr><td>2xx (e.g., 200)</td><td>The page loaded successfully.</td><td>A 200 status makes a page eligible for indexing but does not guarantee it.</td></tr>
+<tr><td>301</td><td>Permanent redirect.</td><td>Use when a page has moved for good. Google treats it as a strong signal that the new URL should be canonical.</td></tr>
+<tr><td>302</td><td>Temporary redirect.</td><td>Use only for genuinely temporary moves. Google treats it as a weaker canonical signal.</td></tr>
+<tr><td>404 / 410</td><td>The page does not exist.</td><td>Previously indexed URLs are eventually dropped from the index. Fine for pages that are truly gone.</td></tr>
+<tr><td>Soft 404</td><td>The page shows a "not found" or empty page but returns a 200 status.</td><td>Search Console reports these. Return a real 404 or 410 for missing pages, or add genuine content if the page should exist.</td></tr>
+<tr><td>5xx</td><td>The server failed to respond properly.</td><td>Google temporarily slows crawling. If errors persist, indexed URLs can eventually be dropped.</td></tr>
+</tbody>
+</table>
 <p>A 404 error means that the requested page cannot be found. A small number of 404 responses can be normal, but problems arise when important pages return 404 errors or internal links repeatedly point to URLs that no longer exist.</p>
-<p>Redirect chains can also create unnecessary complexity. A redirect chain occurs when one URL redirects to another URL that then redirects again.</p>
+<p>Redirect chains can also create unnecessary complexity. A redirect chain occurs when one URL redirects to another URL that then redirects again. A redirect loop is worse: the URLs redirect back to each other, so the page never loads for visitors or crawlers.</p>
 <p>As part of technical SEO best practices, regularly check for broken internal links, unnecessary redirect chains, and outdated URLs. When a page has genuinely moved, redirect it to the most relevant replacement rather than sending users to an unrelated page.</p>
 
 <h3>Structured Data</h3>
@@ -250,6 +309,20 @@
 <h3>8. Confirm HTTPS.</h3>
 <p>Make sure the entire website loads securely and does not produce mixed-content warnings.</p>
 <p>This basic process provides a practical starting point for beginners who want to understand how to do technical SEO without immediately dealing with advanced server or development issues.</p>
+
+<h2>How to Diagnose a Technical SEO Problem</h2>
+<p>An audit tells you what to look at. Diagnosis is what you do when something is actually wrong, such as an important page missing from search results. A repeatable approach keeps you from guessing:</p>
+<ol>
+<li><strong>Define the problem:</strong> Describe the symptom precisely. For example: "the new services page is not appearing in Google."</li>
+<li><strong>Identify the cause:</strong> Use evidence, such as URL Inspection, the Page indexing report, a site crawl, or PageSpeed Insights, to find which processing stage is failing.</li>
+<li><strong>Understand why it matters:</strong> Confirm the page is important enough to justify the fix and that the issue actually affects crawling, indexing, or users.</li>
+<li><strong>Fix the cause:</strong> Change the underlying setting rather than the symptom, and bring in a developer when the fix involves server or code changes.</li>
+<li><strong>Monitor the result:</strong> Re-inspect the URL, validate the fix in Search Console where that option exists, and check the relevant report again over the following weeks.</li>
+</ol>
+<p>Two examples show how this works in practice.</p>
+<p><strong>Example 1 &ndash; a new page is not indexed.</strong> URL Inspection shows "Excluded by 'noindex' tag." The template used for new pages still carries a <code>noindex</code> tag left over from staging. Because important pages cannot appear in search while it is present, the fix is to remove the tag from the template, request indexing for the affected URL, and check the Page indexing report for other pages carrying the same tag.</p>
+<p><strong>Example 2 &ndash; a key page shows poor LCP.</strong> The Core Web Vitals report in Search Console groups the page under "Poor" LCP on mobile. A PageSpeed Insights lab test shows that the largest element is an uncompressed hero image several megabytes in size. The fix is to resize and compress the image and serve it in a modern format, then rerun the lab test to confirm the improvement. Because field data is collected over a rolling period, the Search Console report can take several weeks to reflect the change.</p>
+<p>Ongoing monitoring follows the same logic. Check the Page indexing and Core Web Vitals reports regularly, review any structured data reports Search Console shows for your site, run a crawl after significant site changes to catch new broken links, redirects, or canonical errors, and pay attention to Search Console email alerts.</p>
 
 <h2>Technical SEO Checklist for Beginners</h2>
 <p>Use this checklist as a working reference, organized by priority rather than as a flat list.</p>
@@ -339,8 +412,22 @@
 <p>JavaScript SEO, complex rendering, and advanced crawl-budget management can be addressed when the website actually has a problem that requires them.</p>
 <p>A simple technical SEO strategy should be maintained over time because redesigns, migrations, new content, plugins, and structural changes can introduce new technical problems.</p>
 
+<h2>How to Learn Technical SEO</h2>
+<p>Technical SEO is easier to learn in layers, where each topic builds on the one before it. A practical order for beginners is:</p>
+<ol>
+<li><strong>Crawling and indexing fundamentals:</strong> Understand how pages are discovered, crawled, rendered, and indexed, and why a page can fail at each stage.</li>
+<li><strong>URLs, status codes, redirects, and canonicals:</strong> Learn how URL variations create duplicates, what the common HTTP status codes mean, and how redirects and canonical tags point search engines to the preferred version.</li>
+<li><strong>Robots.txt and XML sitemaps:</strong> Learn what each file controls, and why robots.txt manages crawling rather than indexing.</li>
+<li><strong>Google Search Console:</strong> Verify a site you own, then get comfortable with the Page indexing report, the Sitemaps report, and the URL Inspection tool.</li>
+<li><strong>JavaScript and rendering basics:</strong> Learn the difference between the HTML a server sends and the page a browser builds after running scripts, and why crawlable links matter.</li>
+<li><strong>Core Web Vitals:</strong> Learn what LCP, INP, and CLS measure, and how to read field and lab data in PageSpeed Insights.</li>
+<li><strong>Practice audits:</strong> Crawl a small site, such as your own or a friend's, and work through the audit steps and checklist in this guide.</li>
+<li><strong>Diagnosis and monitoring:</strong> Practice tracing real problems to their cause and confirming that fixes work over time.</li>
+</ol>
+<p>Google Search Central's documentation is the most reliable reference for how Google itself handles crawling, indexing, and structured data, and web.dev covers performance and Core Web Vitals in depth. Hands-on practice with a real website teaches more than reading alone, because it shows you what problems look like in actual reports.</p>
+
 <h2>Conclusion</h2>
-<p>Technical SEO provides the foundation that allows search engines to find, access, understand, and process a website's pages. It includes core areas such as crawlability, indexability, site architecture, XML sitemaps, robots.txt, canonical URLs, performance, mobile usability, HTTPS, redirects, structured data, and JavaScript SEO.</p>
+<p>Technical SEO provides the foundation that allows search engines to find, access, understand, and process a website's pages. It includes core areas such as crawlability, indexability, site architecture, XML sitemaps, robots.txt, canonical URLs, performance, mobile usability, HTTPS, HTTP status codes and redirects, structured data, and JavaScript SEO.</p>
 <p>For beginners, the best approach is not to fix everything at once. Start with the technical SEO basics that can prevent important pages from being crawled or indexed, then address structural, mobile, security, and performance issues. After those areas are stable, move toward supporting and advanced improvements.</p>
 <p>Technical SEO does not guarantee a particular search engine ranking, but a strong technical foundation helps ensure that your content can be discovered and processed properly. Use the audit steps and priority checklist above as a practical starting point for ongoing technical optimization.</p>
 
@@ -356,7 +443,7 @@
 <p>Some areas, such as JavaScript rendering and server configuration, can require developer knowledge. Many technical SEO basics are manageable for beginners using tools such as Google Search Console, PageSpeed Insights, and basic site crawlers.</p>
 
 <h3>What are the main technical SEO elements?</h3>
-<p>The main technical SEO elements include crawlability, indexability, site architecture, internal linking, XML sitemaps, robots.txt, canonical URLs, duplicate-content management, page speed, Core Web Vitals, mobile usability, HTTPS, redirects, structured data, and JavaScript SEO.</p>
+<p>The main technical SEO elements include crawlability, indexability, site architecture, internal linking, XML sitemaps, robots.txt, canonical URLs, duplicate-content management, page speed, Core Web Vitals, mobile usability, HTTPS, HTTP status codes, redirects, structured data, and JavaScript SEO.</p>
 
 <h3>What is the difference between technical SEO and on-page SEO?</h3>
 <p>Technical SEO focuses on whether search engines can access, process, and index a website. On-page SEO focuses on the content and structure of individual pages, including titles, headings, topics, and useful information. Both areas contribute to a complete SEO strategy.</p>
