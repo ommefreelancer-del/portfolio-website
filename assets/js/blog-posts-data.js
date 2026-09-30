@@ -87,5 +87,14 @@ const blogPosts = [
     tags: ["ai-overviews", "seo-strategy", "generative-ai-search"],
     date: "2026-09-16",
     readTime: "17 min read"
+  },
+  {
+    slug: "query-fan-out-seo",
+    title: "Query Fan-Out SEO: How It Works and How to Use It",
+    excerpt: "Learn what query fan-out is, how Google's AI Mode uses it, what it means for SEO, and a workflow for covering related intents without keyword stuffing.",
+    category: "AI SEO",
+    tags: ["query-fan-out", "ai-mode", "generative-ai-search"],
+    date: "2026-09-30",
+    readTime: "18 min read"
   }
 ];

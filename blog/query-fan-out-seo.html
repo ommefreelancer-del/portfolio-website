@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-gtI/uPIfcRPIgoDXFwtKwKyHPhlVauFaIBwJPTpjWbQ='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Query Fan-Out SEO: How It Works and How to Use It | Ascent Digital</title>
+<meta name="description" content="Learn what query fan-out is, how Google's AI Mode uses it, what it means for SEO, and a workflow for covering related intents without keyword stuffing.">
+<link rel="canonical" href="https://ommefreelancer-del.github.io/portfolio-website/blog/query-fan-out-seo.html">
+<meta property="og:title" content="Query Fan-Out SEO: How It Works and How to Use It | Ascent Digital Blog">
+<meta property="og:description" content="Learn what query fan-out is, how Google's AI Mode uses it, what it means for SEO, and a workflow for covering related intents without keyword stuffing.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ommefreelancer-del.github.io/portfolio-website/blog/query-fan-out-seo.html">
+<meta property="og:image" content="https://ommefreelancer-del.github.io/portfolio-website/assets/images/blog/query-fan-out-seo-hero-16x9.png">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Diagram of the four stages of query fan-out: one question, several related searches, retrieved passages, and one combined answer with links to sources">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Query Fan-Out SEO: How It Works and How to Use It | Ascent Digital Blog">
+<meta name="twitter:description" content="Learn what query fan-out is, how Google's AI Mode uses it, what it means for SEO, and a workflow for covering related intents without keyword stuffing.">
+<meta name="twitter:image" content="https://ommefreelancer-del.github.io/portfolio-website/assets/images/blog/query-fan-out-seo-hero-16x9.png">
+<meta name="twitter:image:alt" content="Diagram of the four stages of query fan-out: one question, several related searches, retrieved passages, and one combined answer with links to sources">
+<meta name="theme-color" content="#2563EB">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.prose figure { margin: 8px 0 28px; }
+.prose figcaption { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-top: 8px; }
+.prose .table-wrap { overflow-x: auto; margin: 0 0 24px; }
+.prose .qfo-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; color: var(--text-secondary); }
+.prose .qfo-table th, .prose .qfo-table td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.6; }
+.prose .qfo-table th { background: var(--bg); color: var(--secondary); font-weight: 600; }
+.prose .qfo-table caption { caption-side: bottom; font-size: 0.85rem; padding-top: 8px; text-align: left; }
+.prose .qfo-table th:first-child, .prose .qfo-table td:first-child { min-width: 150px; }
+.prose .table-wrap:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .prose .qfo-table { font-size: 0.9rem; }
+  .prose .qfo-table--wide { min-width: 560px; }
+  .prose .qfo-table th, .prose .qfo-table td { padding: 8px 10px; }
+  .prose .qfo-table th:first-child, .prose .qfo-table td:first-child { min-width: 100px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Query Fan-Out SEO: How It Works and How to Use It",
+      "description": "Learn what query fan-out is, how Google's AI Mode uses it, what it means for SEO, and a workflow for covering related intents without keyword stuffing.",
+      "image": [
+        "https://ommefreelancer-del.github.io/portfolio-website/assets/images/blog/query-fan-out-seo-hero-16x9.png",
+        "https://ommefreelancer-del.github.io/portfolio-website/assets/images/blog/query-fan-out-seo-hero-4x3.png",
+        "https://ommefreelancer-del.github.io/portfolio-website/assets/images/blog/query-fan-out-seo-hero-1x1.png"
+      ],
+      "author": {
+        "@type": "Person",
+        "@id": "https://ommefreelancer-del.github.io/portfolio-website/#person",
+        "name": "Omme Kalsoom",
+        "url": "https://ommefreelancer-del.github.io/portfolio-website/about/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ommefreelancer-del.github.io/portfolio-website/#organization",
+        "name": "Ascent Digital",
+        "url": "https://ommefreelancer-del.github.io/portfolio-website/"
+      },
+      "datePublished": "2026-09-30",
+      "dateModified": "2026-09-30",
+      "mainEntityOfPage": "https://ommefreelancer-del.github.io/portfolio-website/blog/query-fan-out-seo.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ommefreelancer-del.github.io/portfolio-website/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ommefreelancer-del.github.io/portfolio-website/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Query Fan-Out SEO: How It Works and How to Use It", "item": "https://ommefreelancer-del.github.io/portfolio-website/blog/query-fan-out-seo.html" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+  <a href="../index.html" class="logo">
+    <span class="logo-main">ASCENT <span>DIGITAL</span></span>
+    <span class="logo-sub">Founded by Omme Kalsoom</span>
+  </a>
+  <nav id="navMenu" aria-label="Primary">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../services/">Services</a></li>
+      <li><a href="../skills/">Skills</a></li>
+      <li><a href="../portfolio/">Portfolio</a></li>
+      <li><a href="index.html" aria-current="page">Blog</a></li>
+      <li><a href="../faq/">FAQ</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="main-content">
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="../index.html">Home</a> / <a href="index.html">Blog</a> / <span aria-current="page">Query Fan-Out SEO: How It Works and How to Use It</span>
+</nav>
+
+<section class="prose" style="padding-top: 30px;">
+
+  <div class="post-meta-row">
+    <span class="post-category">AI SEO</span>
+    <span>September 30, 2026</span>
+    <span>18 min read</span>
+  </div>
+
+  <h1>Query Fan-Out SEO: How It Works and How to Use It</h1>
+
+  <p>Query fan-out is the technique Google uses in AI Mode to break one question into several related searches, run them at the same time, and combine what it finds into a single answer. For SEO, that shifts attention from a single keyword to the full set of questions sitting behind it.</p>
+  <p>This guide explains what query fan-out is, what Google has actually confirmed about it, and what it means for the way you research and structure content. It also includes something most guides on this topic skip: a transparent worked example using the real keyword research behind this article, from raw Semrush data to the page plan you are reading now.</p>
+
+  <figure>
+    <picture>
+      <source media="(max-width: 640px)" srcset="../assets/images/blog/query-fan-out-seo-hero-1x1-600.png 600w, ../assets/images/blog/query-fan-out-seo-hero-1x1-900.png 900w, ../assets/images/blog/query-fan-out-seo-hero-1x1.png 1200w" sizes="100vw" width="1200" height="1200">
+      <img src="../assets/images/blog/query-fan-out-seo-hero-16x9.png" srcset="../assets/images/blog/query-fan-out-seo-hero-16x9-800.png 800w, ../assets/images/blog/query-fan-out-seo-hero-16x9-1200.png 1200w, ../assets/images/blog/query-fan-out-seo-hero-16x9.png 1600w" sizes="(max-width: 800px) 100vw, 760px" alt="Diagram of the four stages of query fan-out: one question, several related searches, retrieved passages, and one combined answer with links to sources" width="1600" height="900" fetchpriority="high">
+    </picture>
+    <figcaption>The four stages of query fan-out, based on Google&#39;s public description. The sub-queries shown are illustrative.</figcaption>
+  </figure>
+
+  <h2>What Is Query Fan-Out?</h2>
+  <p>Query fan-out is a retrieval technique in which an AI search system splits a user's question into multiple sub-queries, searches for each one, and synthesizes the results into one response. Google describes it this way: <a href="https://blog.google/products/search/google-search-ai-mode-update/" target="_blank" rel="noopener noreferrer">AI Mode "uses our query fan-out technique</a>, breaking down your question into subtopics and issuing a multitude of queries simultaneously on your behalf."</p>
+  <p>The practical effect is that a single question can be answered using information that would otherwise take a searcher several separate searches to find.</p>
+
+  <h3>What does "fan out" mean?</h3>
+  <p>In everyday English, to fan out means to spread outward from a single point, the way the folds of a hand fan open. Computing uses the term the same way: one input is distributed to many outputs or tasks. A "fan-out query" is one of those outputs, a sub-query generated from the original question. Query fan-out simply applies that idea to search: one question in, many searches out.</p>
+
+  <h2>How Query Fan-Out Works in Google AI Mode and AI Overviews</h2>
+  <p>At a high level, the process has four stages, shown in the diagram at the top of this article:</p>
+  <ol>
+    <li><strong>Interpret:</strong> the system works out what the question is really asking.</li>
+    <li><strong>Fan out:</strong> it issues several related searches at once, one for each subtopic.</li>
+    <li><strong>Retrieve:</strong> it gathers relevant pages and passages from Google&#39;s index.</li>
+    <li><strong>Synthesize:</strong> it combines what it found into one answer that links to supporting pages.</li>
+  </ol>
+
+  <h3>What Google has confirmed</h3>
+  <p>Google's own documentation and announcements confirm a small number of specific points:</p>
+  <ul>
+    <li>AI Mode uses query fan-out, breaking a question into subtopics and issuing many queries at once (<a href="https://blog.google/products/search/google-search-ai-mode-update/" target="_blank" rel="noopener noreferrer">Google, May 2025</a>).</li>
+    <li>Deep Search "uses the same query fan-out technique but taken to the next level" and "can issue hundreds of searches" for a single report (same announcement).</li>
+    <li>Both AI Overviews and AI Mode "may use a 'query fan-out' technique," and this lets Google show "a wider and more diverse set of helpful links" than a classic search (<a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google Search Central: AI features and your website</a>).</li>
+    <li>There are no additional requirements or special optimizations for appearing in these features. A page must be indexed and eligible to be shown in Search with a snippet.</li>
+  </ul>
+
+  <h3>What Google has not disclosed</h3>
+  <p>Google does not publish which sub-queries it generates for a given question, how many it runs for AI Overviews, or how it weighs the results. As Digiday reported, <a href="https://digiday.com/media/wtf-is-query-fan-out-in-googles-ai-mode/" target="_blank" rel="noopener noreferrer">Google "doesn't share which queries are being processed"</a> in a fan-out. Anything more specific, such as an exact number of sub-queries, comes from third-party testing rather than Google.</p>
+
+  <div class="table-wrap">
+  <table class="qfo-table">
+    <caption>How this guide separates evidence. Sources are linked throughout.</caption>
+    <thead>
+      <tr><th>Type of evidence</th><th>Examples in this article</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Confirmed by Google</td><td>AI Mode uses query fan-out; AI Overviews may use it; no special optimization or schema is required; pages must be indexed and snippet-eligible</td></tr>
+      <tr><td>Observed by SEO practitioners</td><td>Fan-out queries are synthetic and vary between runs; tools can only approximate them; specific sub-query counts reported by vendors</td></tr>
+      <tr><td>Our own research</td><td>The keyword and question analysis in the worked example below</td></tr>
+      <tr><td>Unknown</td><td>The actual sub-queries Google runs, and exactly how sources are selected</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Query Fan-Out vs. Traditional Search, Long-Tail Keywords, and People Also Ask</h2>
+  <p>The simplest way to understand query fan-out is to compare it with the search concepts SEOs already know. In a traditional search, one query produces one ranked list of pages, and the searcher does the follow-up work. With query fan-out, the system does several of those follow-up searches itself and returns one combined answer.</p>
+
+  <figure>
+    <picture>
+      <source media="(max-width: 640px)" srcset="../assets/images/blog/traditional-search-vs-query-fan-out-mobile-600.png 600w, ../assets/images/blog/traditional-search-vs-query-fan-out-mobile.png 900w, ../assets/images/blog/traditional-search-vs-query-fan-out-mobile-1350.png 1350w" sizes="100vw" width="900" height="1480">
+      <img src="../assets/images/blog/traditional-search-vs-query-fan-out.png" srcset="../assets/images/blog/traditional-search-vs-query-fan-out-800.png 800w, ../assets/images/blog/traditional-search-vs-query-fan-out.png 1200w, ../assets/images/blog/traditional-search-vs-query-fan-out-1800.png 1800w" sizes="(max-width: 800px) 100vw, 760px" alt="Comparison of traditional search, where one query returns one ranked list, and query fan-out, where one question becomes several searches combined into one answer with links" width="1200" height="800" loading="lazy">
+    </picture>
+    <figcaption>Traditional search returns a list for you to work through; query fan-out does part of that follow-up work for you. Sub-queries shown are illustrative.</figcaption>
+  </figure>
+
+  <div class="table-wrap" role="region" aria-label="Comparison of query fan-out with related search concepts" tabindex="0">
+  <table class="qfo-table qfo-table--wide">
+    <thead>
+      <tr><th>Concept</th><th>Who creates the query</th><th>Visible to site owners?</th><th>How to use it for SEO</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Traditional search query</td><td>The searcher</td><td>Partly, as queries in Search Console</td><td>Match the page to the query's intent</td></tr>
+      <tr><td>Long-tail keyword</td><td>The searcher, as a longer, more specific phrase</td><td>Yes, through keyword tools and Search Console</td><td>Target specific needs with focused sections or pages</td></tr>
+      <tr><td>People Also Ask</td><td>Google, from related questions people search</td><td>Yes, on the results page</td><td>A visible source of related questions to answer</td></tr>
+      <tr><td>Fan-out query</td><td>The AI system, generated in the background</td><td>No; Google does not publish them</td><td>Cover the underlying intents, not exact phrasings</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>The key difference is visibility. Long-tail keywords and People Also Ask questions reflect things people actually search and can be seen. Fan-out queries are generated by the system and hidden. Semrush's guide describes them as <a href="https://www.semrush.com/blog/query-fan-out/" target="_blank" rel="noopener noreferrer">"synthetic and probabilistic"</a>: generated on the fly, variable from run to run, and often without search volume of their own.</p>
+
+  <h2>Query Fan-Out in SEO, in Prompts, and in SEO Tools</h2>
+  <p>The term is used in three related but different ways, and our keyword research shows that searchers often mix them up (three of the eleven questions we found ask about fan-out "in SEO or prompts").</p>
+  <ul>
+    <li><strong>In AI search:</strong> the retrieval technique described above, used by Google's AI Mode and AI Overviews. This is the meaning that matters most for SEO.</li>
+    <li><strong>In prompt engineering:</strong> developers who build their own AI applications sometimes use a similar pattern, having a model rewrite one question into several search queries so it can retrieve more relevant documents before answering. This is often called multi-query retrieval or query decomposition. It is an engineering technique, not something website owners optimize for.</li>
+    <li><strong>In SEO tools:</strong> AI visibility platforms track "prompts" rather than keywords, and some simulate the sub-queries an AI system might generate. These tools estimate fan-out behavior; they do not show Google's actual sub-queries.</li>
+  </ul>
+  <p>Keeping these meanings separate avoids a common mistake: treating a tool's simulated sub-queries as if they were Google's real ones.</p>
+
+  <h2>What Query Fan-Out Does, and Does Not, Mean for SEO</h2>
+  <p>Query fan-out changes how a page might be found, not the basics of what makes a page worth finding. Google states that there are no special requirements for appearing in AI features, and that the same foundational SEO best practices apply. A page still has to be crawlable, indexed, and eligible to show a snippet, which is standard <a href="what-is-technical-seo.html">indexing and snippet eligibility</a> work.</p>
+  <p>What it does mean, in our interpretation:</p>
+  <ul>
+    <li><strong>A page can be useful for more than its main keyword.</strong> Because the system searches subtopics separately, a clear answer to one part of a larger question may be the part that gets used.</li>
+    <li><strong>Coverage of related intents matters more than exact wording.</strong> Since the sub-queries are hidden and variable, covering the underlying questions well is more durable than chasing specific phrases.</li>
+    <li><strong>Clear, self-contained sections help readers first.</strong> A section that answers its question directly is easier to scan, and easier to reuse on its own.</li>
+  </ul>
+  <p>What it does <strong>not</strong> mean:</p>
+  <ul>
+    <li>It is not a named Google ranking factor, and covering more sub-topics does not guarantee rankings or AI citations.</li>
+    <li>It does not require special markup. Google says there is no special schema.org structured data needed for AI features.</li>
+    <li>It does not mean every related phrase needs its own page.</li>
+  </ul>
+  <p>If you are working specifically on AI Overviews visibility, our guide on <a href="google-ai-overviews-seo-strategies.html">how to show up in Google AI Overviews</a> covers that side in more detail.</p>
+
+  <h2>How to Research Query Fan-Out Topics</h2>
+  <p>You cannot see Google's fan-out queries, but you can see many of the questions people ask around a topic. Those visible signals are the most reliable starting point.</p>
+
+  <h3>Sources you can actually see</h3>
+  <ul>
+    <li><strong>People Also Ask and related searches</strong> on the results page for your topic.</li>
+    <li><strong>Search Console queries</strong> for pages you already have, especially longer, question-style queries.</li>
+    <li><strong>Keyword tool variations and questions</strong>, such as the Semrush data used in the worked example below.</li>
+    <li><strong>Real customer questions</strong> from emails, sales calls, and support tickets.</li>
+  </ul>
+
+  <h3>Fan-out simulation tools, and their limits</h3>
+  <p>Because Google does not share fan-out data, SEO teams have turned to other tools. Digiday reported that heads of SEO were using People Also Ask plus third-party tools such as AlsoAsked and Profound, and that iPullRank's Mike King built a tool called Qforia that generates related queries using Gemini prompts. Several keyword platforms now offer similar features.</p>
+  <p>These tools can be useful for brainstorming, but treat their output as a simulation. Semrush's own guide advises treating fan-out queries as intent signals to cover rather than exact phrases to target. We could not verify any tool's claim to show Google's actual fan-out queries, so this guide does not rely on one.</p>
+
+  <h2>Worked Example: Researching "Query Fan Out SEO"</h2>
+  <p>This article itself is the example. Here is exactly how the research for it turned into the structure you are reading.</p>
+
+  <h3>The keyword data</h3>
+  <p>We started with the keyword "query fan out seo" in Semrush's United States database on September 30, 2026. Semrush reported:</p>
+  <ul>
+    <li>US volume of 110 searches per month, and global volume of 210.</li>
+    <li>A keyword difficulty of 9%.</li>
+    <li>Informational intent.</li>
+    <li>58 keyword variations, with a combined US volume of 500.</li>
+    <li>11 questions, with a combined US volume of 630.</li>
+  </ul>
+  <p>The variation and question totals come from separate Semrush reports, so they should not be added together. The eleven questions are the clearest view of what people are actually asking, so they drive the analysis below.</p>
+
+  <h3>Grouping the questions by intent</h3>
+  <p>Many of the eleven questions are the same question worded differently. Merging near-duplicates, such as "what is query fan out" and "what is query fan-out," reduced eleven questions to five distinct intents.</p>
+
+  <div class="table-wrap" role="region" aria-label="The 11 Semrush questions grouped by intent" tabindex="0">
+  <table class="qfo-table">
+    <caption>The 11 questions from Semrush (US database, September 30, 2026), grouped by intent.</caption>
+    <thead>
+      <tr><th>Question</th><th>Intent</th><th>Where it is answered</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>what does fan out mean</td><td>Definition and meaning</td><td>What does "fan out" mean?</td></tr>
+      <tr><td>what is fan out query</td><td>Definition and meaning</td><td>What Is Query Fan-Out?</td></tr>
+      <tr><td>what is query fan out</td><td>Definition and meaning</td><td>What Is Query Fan-Out?</td></tr>
+      <tr><td>what is query fan-out</td><td>Definition and meaning</td><td>What Is Query Fan-Out?</td></tr>
+      <tr><td>what is query fan out in seo or prompts</td><td>SEO vs. prompts</td><td>Query Fan-Out in SEO, in Prompts, and in SEO Tools</td></tr>
+      <tr><td>what is query fan out in prompt engineering or seo</td><td>SEO vs. prompts</td><td>Query Fan-Out in SEO, in Prompts, and in SEO Tools</td></tr>
+      <tr><td>what is query fan out in prompts or seo</td><td>SEO vs. prompts</td><td>Query Fan-Out in SEO, in Prompts, and in SEO Tools</td></tr>
+      <tr><td>what is profound seo tool query fan out</td><td>A specific tool (Profound)</td><td>Fan-out simulation tools, and their limits</td></tr>
+      <tr><td>what is profound tool seo query fan out</td><td>A specific tool (Profound)</td><td>Fan-out simulation tools, and their limits</td></tr>
+      <tr><td>what is query fan out technique for seo</td><td>The technique for SEO</td><td>What Query Fan-Out Does, and Does Not, Mean for SEO</td></tr>
+      <tr><td>what is query fan out tracking in seo tools</td><td>Tracking in SEO tools</td><td>How to Measure Results, and What You Cannot Measure</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <figure>
+    <picture>
+      <source media="(max-width: 640px)" srcset="../assets/images/blog/query-fan-out-seo-keyword-research-example-mobile-600.png 600w, ../assets/images/blog/query-fan-out-seo-keyword-research-example-mobile.png 900w, ../assets/images/blog/query-fan-out-seo-keyword-research-example-mobile-1350.png 1350w" sizes="100vw" width="900" height="1600">
+      <img src="../assets/images/blog/query-fan-out-seo-keyword-research-example.png" srcset="../assets/images/blog/query-fan-out-seo-keyword-research-example-800.png 800w, ../assets/images/blog/query-fan-out-seo-keyword-research-example.png 1200w, ../assets/images/blog/query-fan-out-seo-keyword-research-example-1800.png 1800w" sizes="(max-width: 800px) 100vw, 760px" alt="Semrush data for the keyword query fan out seo: 110 US and 210 global monthly searches, 9% keyword difficulty, 58 variations, 11 questions, and the five intent groups the questions reduce to" width="1200" height="960" loading="lazy">
+    </picture>
+    <figcaption>Our research for this article (Semrush, US database, September 30, 2026). Bars count questions per intent, not search volume.</figcaption>
+  </figure>
+
+  <h3>What the questions revealed</h3>
+  <ul>
+    <li><strong>The basics come first.</strong> Four of the eleven questions simply ask what fan-out means. That made a direct definition the first priority.</li>
+    <li><strong>There is real confusion about scope.</strong> Three questions ask whether fan-out belongs to SEO or to prompts. That justified a section explaining the different meanings, which few guides we reviewed address.</li>
+    <li><strong>Tools are part of the search journey.</strong> Two questions name a specific tool, and one asks about tracking. Those belong inside sections on research and measurement rather than on separate pages.</li>
+  </ul>
+
+  <h3>The resulting page plan</h3>
+  <p>Each of the five intents got exactly one home in this article. Near-duplicate questions were answered once, in natural language, rather than repeated as separate headings. The brand-name tool questions were addressed in a neutral tools section instead of a dedicated page, because the useful answer is about how fan-out tools work in general, not about one product.</p>
+
+  <h2>Turning Query Fan-Out Research Into a Page Plan</h2>
+  <p>Once you have grouped the questions around a topic, each intent needs one of three decisions: cover it on the current page, give it a supporting page, or skip it.</p>
+
+  <figure>
+    <picture>
+      <source media="(max-width: 640px)" srcset="../assets/images/blog/query-fan-out-seo-workflow-decisions-mobile-600.png 600w, ../assets/images/blog/query-fan-out-seo-workflow-decisions-mobile.png 900w, ../assets/images/blog/query-fan-out-seo-workflow-decisions-mobile-1350.png 1350w" sizes="100vw" width="900" height="1640">
+      <img src="../assets/images/blog/query-fan-out-seo-workflow-decisions.png" srcset="../assets/images/blog/query-fan-out-seo-workflow-decisions-800.png 800w, ../assets/images/blog/query-fan-out-seo-workflow-decisions.png 1200w, ../assets/images/blog/query-fan-out-seo-workflow-decisions-1800.png 1800w" sizes="(max-width: 800px) 100vw, 760px" alt="Five-step workflow of collect, group, decide, write and link, and measure, with three placement options for each intent and a warning against thin pages and keyword stuffing" width="1200" height="880" loading="lazy">
+    </picture>
+    <figcaption>A recommended workflow for turning fan-out research into content decisions. This is our process, not a description of Google&#39;s systems.</figcaption>
+  </figure>
+
+  <ul>
+    <li><strong>Cover it on the current page</strong> when it answers part of the same question for the same reader. Most related intents belong here.</li>
+    <li><strong>Create a supporting page</strong> when it is a distinct question that deserves a full answer of its own, and link the two pages together.</li>
+    <li><strong>Skip it</strong> when it is a duplicate wording, has no clear user need, or does not fit your site.</li>
+  </ul>
+  <p>Resist the urge to create a page for every variation. Google's spam policies describe <a href="https://developers.google.com/search/docs/essentials/spam-policies" target="_blank" rel="noopener noreferrer">scaled content abuse</a> as generating many pages primarily to manipulate rankings rather than to help people, including using generative AI tools to produce pages without adding value. Dozens of thin pages targeting slight rewordings of the same question is exactly the pattern to avoid.</p>
+
+  <h2>How to Cover Related Intents Without Keyword Stuffing</h2>
+  <p>Useful topical coverage answers the different things readers need to know. Keyword stuffing repeats phrases in an attempt to match searches. Google's spam policies define keyword stuffing as filling a page with keywords in an attempt to manipulate rankings, including unnatural repetition that reads awkwardly.</p>
+  <p>Our own data shows the difference clearly. Three of our questions were near-identical: "what is query fan out in seo or prompts," "…in prompt engineering or seo," and "…in prompts or seo."</p>
+  <ul>
+    <li><strong>Weaker approach:</strong> three separate headings, each repeating one of those phrasings, with three versions of the same answer.</li>
+    <li><strong>Better approach:</strong> one section that explains the real confusion behind all three, the difference between fan-out in AI search, in prompt engineering, and in SEO tools, written for a person rather than for a phrase.</li>
+  </ul>
+  <p>Good <a href="what-is-on-page-seo.html">on-page structure</a> supports this: descriptive headings that reflect real questions, a direct answer at the start of each section, and supporting detail underneath. Google also states that it has no preferred word count, so coverage should be driven by what readers need, not by length.</p>
+
+  <h2>Query Fan-Out, Topic Clusters, and Internal Linking</h2>
+  <p>No single page should try to cover everything. When research surfaces intents that deserve their own pages, a topic cluster connects them: a central page covers the core topic, supporting pages go deeper on distinct subtopics, and internal links make the relationship clear to readers and search engines.</p>
+  <p>The same grouping process used in keyword research applies here. If you are new to it, our guide to <a href="what-is-keyword-research.html">keyword clustering and intent</a> explains how to group related terms and decide which belong together on one page.</p>
+  <p>Link between cluster pages where it genuinely helps the reader move to the next question, using descriptive anchor text rather than repeated exact-match phrases.</p>
+
+  <h2>How to Measure Results, and What You Cannot Measure</h2>
+  <p>Measuring anything related to query fan-out comes with a hard limit: the sub-queries themselves are not reported anywhere by Google.</p>
+  <ul>
+    <li><strong>Search Console includes AI features, but does not separate them.</strong> Google states that appearances in AI Overviews and AI Mode are included in the overall search traffic in Search Console, within the "Web" search type. You cannot filter to AI features alone.</li>
+    <li><strong>Watch the broader query mix for a page.</strong> Growth in impressions for longer, question-style queries can indicate that a page is covering more of its topic. It does not prove anything about fan-out specifically.</li>
+    <li><strong>Check manually, and record the date.</strong> Searching your target questions yourself shows what appears today, but results vary by user, location, and time.</li>
+    <li><strong>Treat third-party AI visibility data as estimates.</strong> Prompt-tracking tools measure the prompts you choose to track on the platforms they monitor. They are useful for spotting trends, not for confirming what Google did.</li>
+  </ul>
+  <p>If you are reviewing an existing site, <a href="what-is-an-seo-audit.html">an SEO audit</a> is a practical way to check which pages already answer related questions well and which need work.</p>
+
+  <h2>Limitations and Open Questions</h2>
+  <p>It is worth being clear about what nobody outside Google can currently know:</p>
+  <ul>
+    <li>Which sub-queries Google runs for a given question, and how many.</li>
+    <li>How Google weighs one source against another when it synthesizes an answer.</li>
+    <li>How consistent fan-out is between repeated searches. SEO vendors report that it varies, but their figures come from their own testing.</li>
+    <li>Whether other AI assistants work the same way. "Query fan-out" is Google's term; the industry applies it loosely to similar processes in other systems, which may differ.</li>
+  </ul>
+  <p>Google also states that it does not guarantee it will crawl, index, or serve any page, even when a page follows its guidance. Query fan-out does not change that.</p>
+
+  <h2>Common Query Fan-Out SEO Mistakes</h2>
+  <ul>
+    <li><strong>Creating a page for every variation.</strong> This produces thin, overlapping pages and risks the scaled content pattern Google's spam policies describe.</li>
+    <li><strong>Stuffing variations into headings.</strong> Repeating near-identical phrasings makes a page worse to read without adding information.</li>
+    <li><strong>Treating simulated sub-queries as Google's real ones.</strong> Tool output is an approximation. Use it to find intents, not to set exact targets.</li>
+    <li><strong>Adding FAQ markup expecting AI or rich-result benefits.</strong> Google says no special schema is needed for AI features, and it <a href="https://developers.google.com/search/updates" target="_blank" rel="noopener noreferrer">stopped showing FAQ rich results in Google Search in May 2026</a>. A visible FAQ can still help readers.</li>
+    <li><strong>Trusting vendor statistics as universal facts.</strong> Figures about sub-query counts or citation rates come from individual companies' own testing and may not apply to your site.</li>
+    <li><strong>Ignoring the basics.</strong> A page that is not indexed, or not allowed to show a snippet, cannot be used in AI features at all.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Is query fan-out a Google ranking factor?</h3>
+  <p>Google describes query fan-out as a technique its AI features use to find information. It does not list it as a ranking factor, and it has said there are no special requirements or optimizations for appearing in AI features beyond standard SEO best practices.</p>
+
+  <h3>Does Search Console show fan-out queries?</h3>
+  <p>No. Google includes AI Overviews and AI Mode appearances in Search Console's overall Web data, but it does not report the sub-queries it generates.</p>
+
+  <h3>Do I need schema or FAQ markup for AI Mode?</h3>
+  <p>No. Google states that there is no special schema.org structured data needed to appear in AI features. Accurate structured data can still help Google understand a page, but it is not a requirement, and FAQ rich results are no longer shown in Google Search.</p>
+
+  <h3>Does query fan-out apply to ChatGPT?</h3>
+  <p>The term comes from Google, but the SEO industry uses it for similar processes in other AI assistants that search the web before answering. Those systems are built differently, so do not assume they behave identically to Google's.</p>
+
+  <h3>Should I create a page for every fan-out query?</h3>
+  <p>No. Most related intents belong as sections on an existing page. Create a separate page only when an intent is distinct enough to deserve a full answer of its own, and avoid producing many thin pages for slight rewordings.</p>
+
+  <h3>Can SEO tools show Google's real fan-out queries?</h3>
+  <p>Google does not publish its fan-out queries, so we could not verify any tool's claim to show them. Treat tool output as a simulation that helps you find related intents.</p>
+
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li>Query fan-out is Google's technique for splitting one question into many searches and combining the results into one answer.</li>
+    <li>Google confirms it is used in AI Mode and may be used in AI Overviews, but does not publish the sub-queries it runs.</li>
+    <li>There is no special optimization for it. Indexing, snippet eligibility, and genuinely useful content remain the foundation.</li>
+    <li>Research the questions people visibly ask, group them by intent, and give each intent one clear home.</li>
+    <li>Cover related intents naturally; avoid thin pages for every variation and repeated phrasing in headings.</li>
+    <li>Measure with care: Search Console includes AI features but does not separate them, and third-party data is an estimate.</li>
+  </ul>
+  <p>Want help planning content around related intents? <a href="../contact/">Get in touch</a>.</p>
+  <p><em>Sources in this article were checked on September 30, 2026. Google's AI search features change often, so treat specific details as current to that date.</em></p>
+
+  <div class="author-box">
+    <div class="avatar">OK</div>
+    <div>
+      <h3>Omme Kalsoom</h3>
+      <p>Founder of Ascent Digital. <a href="../about/">Read more about Omme &rarr;</a></p>
+    </div>
+  </div>
+
+  <div class="share-row" id="shareRow">
+    <span>Share:</span>
+    <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" title="Share on X" aria-label="Share on X">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.6l-5.2-6.8L5.2 22H2l8.1-9.3L1.5 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.7L7.4 4H5.6l12.1 16Z"/></svg>
+    </a>
+    <a id="shareLinkedIn" href="#" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3.2 8.75h3.5V21H3.2V8.75Zm6.2 0h3.35v1.68h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.28 4.18 5.24V21h-3.5v-5.68c0-1.35-.02-3.1-1.9-3.1-1.9 0-2.19 1.47-2.19 3v5.78H9.4V8.75Z"/></svg>
+    </a>
+    <a id="shareFacebook" href="#" target="_blank" rel="noopener noreferrer" title="Share on Facebook" aria-label="Share on Facebook">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
+    </a>
+    <a id="shareWhatsApp" href="#" target="_blank" rel="noopener noreferrer" title="Share on WhatsApp" aria-label="Share on WhatsApp">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1-4.5A8.4 8.4 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+    </a>
+  </div>
+
+  <div class="related-posts">
+    <h2>Related Articles</h2>
+    <div class="card-grid" id="relatedPosts" data-current-category="AI SEO" data-current-slug="query-fan-out-seo"></div>
+    <p id="noRelated" class="section-intro" style="display:none; margin-top:10px; text-align:left;">No related articles published yet.</p>
+  </div>
+</section>
+
+</main>
+
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">ASCENT <span>DIGITAL</span></div>
+      <p>AI Automation Specialist &amp; Technical SEO Consultant<br>AI Agent Developer &middot; Builder of ADASOS<br>Founded by Omme Kalsoom</p>
+      <div class="social-links">
+        <button type="button" class="social-link-pending" title="LinkedIn - coming soon" aria-label="LinkedIn (coming soon)" disabled>in</button>
+        <button type="button" class="social-link-pending" title="Fiverr - coming soon" aria-label="Fiverr (coming soon)" disabled>fv</button>
+        <button type="button" class="social-link-pending" title="GitHub - coming soon" aria-label="GitHub (coming soon)" disabled>gh</button>
+        <button type="button" class="social-link-pending" title="Facebook - coming soon" aria-label="Facebook (coming soon)" disabled>fb</button>
+        <a href="https://wa.me/923315044035" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1-4.5A8.4 8.4 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+        </a>
+        <a href="mailto:hello@yourdomain.com" title="Email" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../services/">Services</a></li>
+        <li><a href="../skills/">Skills</a></li>
+        <li><a href="../portfolio/">Portfolio</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="../faq/">FAQ</a></li>
+        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="../terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h2>Get In Touch</h2>
+      <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+      <a href="https://wa.me/923315044035" target="_blank" rel="noopener noreferrer">+92 331 5044035</a>
+      <span>Pakistan</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Ascent Digital. All rights reserved.</p>
+    <a href="../index.html#home" class="footer-top-link">Back to Top &uarr;</a>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+<script src="../assets/js/blog-posts-data.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/post-template.js"></script>
+
+</body>
+</html>
