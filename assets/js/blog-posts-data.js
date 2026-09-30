@@ -86,6 +86,6 @@ const blogPosts = [
     category: "AI SEO",
     tags: ["ai-overviews", "seo-strategy", "generative-ai-search"],
     date: "2026-09-16",
-    readTime: "11 min read"
+    readTime: "17 min read"
   }
 ];

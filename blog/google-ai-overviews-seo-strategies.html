@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Security: CSP script-src hash covers this page's JSON-LD block below. If you edit that block, regenerate the hash (see SECURITY.md) or this page's schema will silently stop loading. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-vzywElwR5oSmCZ43EyiS2+bocYaSD07jUoSS6QomaY0='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-a/cW7JuVCgfW5ZHCj8hLwiml/L/DKBxAGJFmL6hSqLA='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>How to Show Up in Google AI Overviews: 7 SEO Strategies | Ascent Digital</title>
 <meta name="description" content="Learn 7 practical SEO strategies to get your content cited in Google AI Overviews, from content structure and schema markup to E-E-A-T and technical SEO.">
@@ -23,6 +23,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.prose .table-wrap { overflow-x: auto; margin: 0 0 24px; }
+.prose .aio-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; color: var(--text-secondary); }
+.prose .aio-table th, .prose .aio-table td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.6; }
+.prose .aio-table th { background: var(--bg); color: var(--secondary); font-weight: 600; }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,22 +37,41 @@
       "@type": "Article",
       "headline": "How to Show Up in Google AI Overviews: 7 SEO Strategies",
       "description": "Learn 7 practical SEO strategies to get your content cited in Google AI Overviews, from content structure and schema markup to E-E-A-T and technical SEO.",
-      "author": { "@type": "Person", "name": "Omme Kalsoom" },
+      "image": "https://ommefreelancer-del.github.io/portfolio-website/assets/images/blog/google-ai-overviews-seo-guide.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Omme Kalsoom"
+      },
       "publisher": {
         "@type": "Organization",
         "name": "Ascent Digital",
         "url": "https://ommefreelancer-del.github.io/portfolio-website/"
       },
       "datePublished": "2026-09-16",
-      "dateModified": "2026-09-16",
+      "dateModified": "2026-09-29",
       "mainEntityOfPage": "https://ommefreelancer-del.github.io/portfolio-website/blog/google-ai-overviews-seo-strategies.html"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ommefreelancer-del.github.io/portfolio-website/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ommefreelancer-del.github.io/portfolio-website/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "How to Show Up in Google AI Overviews: 7 SEO Strategies", "item": "https://ommefreelancer-del.github.io/portfolio-website/blog/google-ai-overviews-seo-strategies.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ommefreelancer-del.github.io/portfolio-website/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://ommefreelancer-del.github.io/portfolio-website/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Show Up in Google AI Overviews: 7 SEO Strategies",
+          "item": "https://ommefreelancer-del.github.io/portfolio-website/blog/google-ai-overviews-seo-strategies.html"
+        }
       ]
     },
     {
@@ -54,18 +79,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Why would a page appear correctly in search results but still get skipped by an AI Overview?",
+          "name": "Can I submit my page to Google AI Overviews?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The answer, even if present, may be buried in dense paragraphs or not stated plainly near the top of the relevant section, making it hard for the AI system to extract cleanly. Competitors who state their answer more directly are more likely to get pulled into the summary instead, even with similar overall page quality."
+            "text": "No. There is no submission process or opt-in. A page must be indexed and eligible to show a snippet in Google Search, and Google then decides which pages to use as supporting links for each AI Overview."
           }
         },
         {
           "@type": "Question",
-          "name": "Does a low click-through rate alongside rising AI Overview impressions mean my content is underperforming?",
+          "name": "Do I need to rank first to appear in an AI Overview?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not necessarily. AI Overview appearances often generate strong impressions with comparatively low click-through rates simply because the AI Overview answers the query directly on the results page. Watch for rising impressions over time as the more meaningful signal."
+            "text": "Google hasn't published a ranking threshold. Being indexed and eligible to show a snippet is required, and strong organic visibility can help, but Google says AI Overviews can show a wider set of links than the classic results, and a top ranking doesn't guarantee a citation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why would a page appear correctly in search results but still get skipped by an AI Overview?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google doesn't explain why a specific page is or isn't cited. One common explanation is that the answer, even if present, is buried in dense paragraphs or not stated plainly near the top of the relevant section. Pages that state their answer more directly may be easier to use in a summary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a low click-through rate alongside rising impressions mean my content is underperforming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. Search Console combines AI Overview appearances with other Web results, so you can't isolate them there, but when a query shows an AI Overview, some searchers get their answer without clicking. Look at impressions and clicks for your target queries over time rather than click-through rate alone."
           }
         },
         {
@@ -81,7 +122,7 @@
           "name": "Does adding schema markup increase my odds of being cited in an AI Overview?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not on its own. Schema removes ambiguity about what your content means, which helps, but it works best as a supplement to already clear, well-organized content, not a substitute for it."
+            "text": "Not on its own. Google says no special schema is needed for its AI features. Accurate structured data helps Google understand a page, but it supplements clear, well-organized content rather than replacing it."
           }
         },
         {
@@ -89,7 +130,15 @@
           "name": "Why do mentions on other websites matter if my own page already answers the question well?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Because AI Overviews cross-reference what other sites say about you, not just your own page. If a competitor has credible external mentions and you have none, the model has more material to draw from and more reason to trust their content over yours, even with equally strong on-page content."
+            "text": "Google hasn't published how its AI features use external signals, but links and mentions from other sites have long helped search systems judge credibility. A page with no reputation beyond its own site may be at a disadvantage even when its content is strong."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I keep my content out of AI Overviews?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Google says the controls that limit snippets in Search, namely nosnippet, data-nosnippet, max-snippet, and noindex, also limit how your content appears in its AI features. Using them can also reduce how your page appears in regular search results."
           }
         }
       ]
@@ -135,7 +184,8 @@
   <div class="post-meta-row">
     <span class="post-category">AI SEO</span>
     <span>September 16, 2026</span>
-    <span>11 min read</span>
+    <span>Updated September 29, 2026</span>
+    <span>17 min read</span>
   </div>
 
   <h1>How to Show Up in Google AI Overviews: 7 SEO Strategies</h1>
@@ -145,23 +195,63 @@
 
   <img src="../assets/images/blog/google-ai-overviews-seo-guide.jpg" alt="How to show up in Google AI Overviews: 7 SEO strategies guide cover" width="3320" height="2120" />
 
+  <h2>How Do You Show Up in Google AI Overviews?</h2>
+  <p>There is no application, submission form, or special markup for AI Overviews. To be eligible, a page must be indexed by Google and allowed to appear in Search with a snippet; beyond that, Google says the same SEO best practices that apply to Search apply to its AI features. In practice, that means answering the questions people actually ask clearly and accurately, keeping the page technically accessible, and building the credibility that makes a source worth citing. None of this guarantees a citation, but it improves the chance that your content is considered.</p>
+  <p>The seven strategies below break that down:</p>
+  <ol>
+    <li>Structure content so answers are direct and easy to extract.</li>
+    <li>Build topical depth with interlinked content.</li>
+    <li>Answer conversational, question-based searches.</li>
+    <li>Make experience, expertise, and trust visible.</li>
+    <li>Use accurate structured data where it fits.</li>
+    <li>Earn genuine mentions and citations beyond your own site.</li>
+    <li>Get the technical foundations right so Google can crawl, index, and show your page.</li>
+  </ol>
+
   <h2>What Are Google AI Overviews and How Do They Select Content?</h2>
   <p>Google AI Overviews are the AI-generated summaries that appear at the top of certain search results, above the traditional blue links. Instead of asking you to click through to five different websites to piece together an answer, Google generates a synthesized response directly on the results page, often pulling information from multiple sources and citing a handful of them with links.</p>
-  <p>Google's systems first identify a set of relevant, high-quality web pages using the same broad ranking signals it relies on for regular search results: relevance, content quality, authority. A generative model then reads across those sources and produces a written summary. Google isn't inventing an answer from nothing; it's synthesizing one from existing content that already ranks well. If your page isn't visible enough to be part of that initial pool of candidate sources, it has little chance of being used in the summary above it.</p>
+  <p>Google doesn't publish a formula for choosing AI Overview sources, but its documentation describes the broad process. AI Overviews are built on Google Search and draw on pages in Google's index. They may use a technique Google calls "query fan-out," running several related searches across subtopics to find supporting pages, which Google says lets it show a wider and more diverse set of links than a classic results page. A generative model then writes the summary and links to pages that support it.</p>
+  <p>That means there are three separate hurdles, and it helps not to confuse them:</p>
+  <div class="table-wrap">
+  <table class="aio-table">
+    <thead>
+      <tr><th>Stage</th><th>What it means</th><th>What you can influence</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Eligibility for Search</td><td>The page can be crawled, is indexed, and is allowed to show a snippet</td><td>robots.txt rules, noindex and snippet settings, technical health</td></tr>
+      <tr><td>Organic visibility</td><td>The page ranks for relevant searches in the regular results</td><td>Relevance, content quality, links, and page experience</td></tr>
+      <tr><td>AI Overview selection</td><td>Google chooses the page as a supporting link for a generated answer</td><td>Clear, accurate answers to the specific question, and credibility; the final choice is Google's</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Strong organic visibility can improve the likelihood of being considered, because the same index and systems are involved. But ranking first doesn't guarantee a citation, and because of query fan-out, the cited pages aren't necessarily the ones at the top of the classic results for the original query.</p>
+
+  <h3>What Google Has Confirmed vs. What SEOs Have Observed</h3>
+  <p>Much of the advice about AI Overviews comes from industry testing rather than from Google, so this guide keeps the two apart:</p>
+  <ul>
+    <li><strong>Confirmed in <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google's documentation on AI features</a>:</strong> there are no additional requirements or special optimizations for appearing; a page must be indexed and eligible to show a snippet; no special schema or AI-specific files are needed; the standard snippet and indexing controls limit what appears; and AI feature traffic is counted in Search Console's overall Web data.</li>
+    <li><strong>Observed by the SEO industry, not confirmed by Google:</strong> that concise, self-contained answers are cited more often, that topical depth across a site helps, and that mentions on other websites influence selection. These patterns are consistent with how search works generally, but treat them as working assumptions rather than rules.</li>
+  </ul>
 
   <img src="../assets/images/blog/ai-overview-selection-factors-framework.png" alt="Framework showing the four factors Google looks for in an AI Overview source: clear answers, topical depth, structural clarity, and trust signals" loading="lazy" width="3320" height="2160" />
 
   <h2>1. Structure Your Content for Direct, Extractable Answers</h2>
-  <p>Google's AI Overviews don't read your page the way a human visitor does. They scan for chunks of content that answer a specific question clearly enough to lift out and reuse. If your key point is buried in the fourth paragraph or spread across three sentences before finally landing on the answer, a competitor who just said the thing directly gets pulled in instead.</p>
+  <p>Put the answer to each question in the first sentence or two after its heading, worded so it still makes sense if that passage is read on its own. This helps readers who skim, and it's the format the SEO industry most often associates with AI Overview citations.</p>
+  <p>AI systems generally don't use your page the way a human visitor does. They look for chunks of content that answer a specific question clearly enough to lift out and reuse. If your key point is buried in the fourth paragraph or spread across three sentences before finally landing on the answer, a competitor who just said the thing directly gets pulled in instead.</p>
 
   <h3>Lead With the Answer, Then Explain</h3>
   <p>When you're addressing a specific question, in a heading, an FAQ, or a section of a longer guide, the sentence or two immediately following it should contain the actual answer, not background or a rephrasing of the question. Give the direct answer first, then explain the reasoning, exceptions, or context underneath it.</p>
+  <p><strong>Example.</strong> Take the question &quot;Does submitting a sitemap guarantee my pages will be indexed?&quot;</p>
+  <ul>
+    <li><strong>Weaker:</strong> &quot;Sitemaps have been part of SEO for a long time, and opinions differ on how much they help. Before answering, it's worth looking at how search engines discover pages&hellip;&quot; The answer arrives several sentences later, if at all.</li>
+    <li><strong>Better:</strong> &quot;No. A sitemap helps Google discover your URLs, but Google still decides whether each page is indexed.&quot; The explanation of what affects that decision follows.</li>
+  </ul>
 
   <h3>Write in Self-Contained Chunks</h3>
   <p>AI Overviews tend to pull small, complete units of meaning (a sentence, a short paragraph, a list item) rather than stitching fragments together. Read a single paragraph in isolation: does it stand on its own, or does it lean on "as mentioned above" to make sense? Content written in tightly scoped, self-contained units is easier for an AI system to lift cleanly, and easier for a human to skim too.</p>
 
   <h3>Use Formatting That Signals Structure</h3>
-  <p>Headings, numbered lists, bullet points, and short tables organize information for readers and give AI systems clear signals about where one idea ends and another begins. A few habits worth adopting:</p>
+  <p>Headings, numbered lists, bullet points, and short tables organize information for readers and give AI systems clear signals about where one idea ends and another begins. These are standard <a href="what-is-on-page-seo.html">on-page SEO</a> habits, and a few are worth adopting deliberately:</p>
   <ul>
     <li>Use question-based subheadings where they reflect how people actually search.</li>
     <li>Break sequential information into numbered steps rather than paragraph form.</li>
@@ -170,10 +260,11 @@
   </ul>
 
   <h2>2. Build Topical Authority With Comprehensive, Interlinked Content</h2>
-  <p>A single well-optimized page can occasionally earn a spot in an AI Overview, but it rarely holds that spot on its own. The feature tends to favor sites that demonstrate depth on a subject, not a single strong article. That broader understanding of a subject is topical authority, and building it deliberately is one of the more overlooked levers in AI Overview visibility.</p>
+  <p>Cover a subject thoroughly across a group of linked pages, not just one article, so both readers and search systems can see the depth of your knowledge.</p>
+  <p>A single well-optimized page can occasionally earn a spot in an AI Overview, but industry observation suggests the feature often draws on sites that demonstrate depth on a subject, not a single strong article. That broader understanding of a subject is topical authority, and building it deliberately is one of the more overlooked levers in AI Overview visibility.</p>
 
   <h3>Why Depth Beats a Single Great Page</h3>
-  <p>A site with one detailed article on a topic but nothing else around it looks isolated to these systems. A site with dozens of interconnected articles covering the same subject area from different angles gives Google far more confidence that it's dealing with a genuine authority, not a one-off page.</p>
+  <p>A site with one detailed article on a topic but nothing else around it looks isolated to these systems. A site with dozens of interconnected articles covering the same subject area from different angles is more likely to be recognized as a genuine resource, not a one-off page.</p>
 
   <h3>How to Build a Topic Cluster</h3>
   <p>Building topical authority means mapping out a subject area deliberately and filling in the gaps with useful, non-redundant content:</p>
@@ -190,6 +281,7 @@
   <p>A page linked to from several credible pages on your own site looks embedded in a body of expertise, versus an orphaned page with no internal links pointing to it. If you haven't read our breakdown of <a href="what-is-keyword-research.html">how keyword research turns into a content strategy</a>, it's a useful companion to this section. Clustering keywords is usually the first step toward mapping a topic cluster like this one.</p>
 
   <h2>3. Optimize for Conversational and Question-Based Queries</h2>
+  <p>Write sections that answer full, natural-language questions directly, using the phrasing your audience actually uses rather than short keyword fragments.</p>
   <p>Google AI Overviews draw heavily on content that answers questions the way a person would actually ask them, not the clipped keyword fragments people typed a decade ago. Behind the feature are systems trying to match a full, natural question to a piece of content that answers it clearly and completely.</p>
 
   <h3>Identify the Real Questions Your Audience Is Asking</h3>
@@ -206,8 +298,10 @@
     <li>Answer the question early in the section, then explain with context and nuance.</li>
     <li>Write in a natural, spoken register; you don't need to sound robotic to be authoritative.</li>
   </ul>
+  <p><strong>Example.</strong> The search question &quot;How do I get my page into Google's AI Overviews?&quot; deserves a direct answer first: &quot;There's no submission process. Make sure the page is indexed and allowed to show a snippet, then answer the question clearly and accurately.&quot; The supporting detail comes next: what eligibility involves, what improves the odds, and what's outside your control.</p>
 
   <h2>4. Strengthen E-E-A-T Signals to Earn AI Trust</h2>
+  <p>Make it obvious who wrote the content, why they're qualified, and where the facts come from. Google's guidance on <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener noreferrer">helpful, reliable, people-first content</a> applies to its AI features as well as to regular Search.</p>
   <p>Before a large language model decides whether your content is trustworthy enough to summarize, it has to answer a more basic question: does this come from someone who actually knows what they're talking about? That's E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness), and it matters just as much, arguably more, when an AI system is deciding which sources are safe to pull into a generated answer.</p>
 
   <h3>Show Real Experience, Not Just Expertise</h3>
@@ -225,53 +319,64 @@
   </ul>
 
   <h2>5. Use Structured Data and Schema Markup to Aid Understanding</h2>
+  <p>Structured data isn't required for AI Overviews; Google says there's no special schema to add for its AI features. Accurate markup is still worth having, because it helps Google understand a page and can make it eligible for other search features.</p>
   <p>Structured data won't guarantee that Google's AI Overviews pull your content into a summary, but it removes a layer of ambiguity that can work against you. Schema markup follows a shared vocabulary, <a href="https://schema.org" target="_blank" rel="noopener noreferrer">schema.org</a>, that explicitly labels what a piece of content means (this is a price, this is an author, this is a review score) instead of leaving Google's systems to infer meaning from context.</p>
-  <p>A few schema types are worth prioritizing for AI Overview visibility specifically:</p>
+  <p>If you use it, choose types that genuinely describe the page, for example:</p>
   <ul>
     <li><strong>Article/BlogPosting</strong>: identifies authorship, publish and update dates, and headline structure.</li>
-    <li><strong>FAQPage</strong>: marks up question-and-answer content directly.</li>
-    <li><strong>HowTo</strong>: structures step-by-step processes.</li>
     <li><strong>Organization/Person</strong>: clarifies who's publishing and who wrote it.</li>
     <li><strong>BreadcrumbList</strong>: shows how a page fits into your site's broader structure.</li>
+    <li><strong>Product or LocalBusiness</strong>: describes products or a business's details, where those are what the page is about.</li>
   </ul>
-  <p>Test markup with Google's Rich Results Test before publishing, and monitor Search Console's enhancement reports afterward. Schema can break silently when a page template changes.</p>
+  <p>Mark up only information that's visible on the page; Google's <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank" rel="noopener noreferrer">structured data guidelines</a> require markup to represent the page content, and its AI features documentation specifically recommends checking that structured data matches the visible text. Test markup with Google's Rich Results Test before publishing, and monitor Search Console's enhancement reports afterward. Schema can break silently when a page template changes.</p>
 
   <h2>6. Earn Citations and Mentions Across the Web</h2>
-  <p>Google's AI Overviews cross-reference what the rest of the internet says about you, not just your own page. If you're invisible everywhere except your own domain, you're asking Google to take your authority on faith alone. This is part of why <a href="what-is-guest-posting.html">guest posting</a> and <a href="what-is-off-page-seo.html">off-page SEO and backlinks</a> remain relevant in the AI search era. The goal has shifted from chasing links purely for ranking power to building a footprint of mentions and citations that signal real authority in your space.</p>
+  <p>Build a genuine reputation beyond your own website through press coverage, citations, and mentions from relevant, credible sources.</p>
+  <p>Many SEOs believe AI Overviews weigh what the rest of the internet says about you, not just your own page. Google hasn't published how its AI features use external signals, but links and mentions from other sites have long been part of how search systems judge credibility. If you're invisible everywhere except your own domain, you're asking Google to take your authority on faith alone. This is part of why <a href="what-is-guest-posting.html">guest posting</a> and <a href="what-is-off-page-seo.html">off-page SEO and backlinks</a> remain relevant in the AI search era. The goal has shifted from chasing links purely for ranking power to building a footprint of mentions and citations that signal real authority in your space.</p>
   <p>That footprint comes from a mix of sources: digital PR and press coverage, guest contributions and expert roundups, being cited by other sites as a source, directory and industry-association listings, and active participation in relevant communities. Start by identifying what your business genuinely knows better than most, and look for realistic, relevant places to share it.</p>
 
   <h2>7. Improve Technical SEO Foundations for Crawlability</h2>
+  <p>Make sure Google can crawl, render, and index the page, and is allowed to show a snippet from it. Without that, none of the other strategies in this guide can take effect.</p>
   <p>No content will ever rank in Google's traditional results or get pulled into an AI Overview if Google's systems can't crawl it, render it, and index it cleanly first. AI Overviews draw from the same index that powers standard search results. There's no separate crawler for AI-featured content. The <a href="what-is-technical-seo.html">technical SEO basics</a> that have mattered for years still apply, and arguably matter more, because AI systems need to process a page quickly and unambiguously to pull accurate information from it.</p>
-  <p>Check your robots.txt file and XML sitemap, review the "Pages" report in Search Console for wrongly excluded URLs, address page speed issues (usually unoptimized images or slow server response), confirm mobile-friendliness, and use canonical tags for duplicate content. If you haven't run one recently, a full <a href="what-is-an-seo-audit.html">SEO audit</a> is the fastest way to surface these gaps in one pass rather than checking each item individually.</p>
+  <p>Check your robots.txt file and XML sitemap, review the "Pages" report in Search Console for wrongly excluded URLs, address page speed issues (usually unoptimized images or slow server response), confirm mobile-friendliness, and use canonical tags for duplicate content. Also confirm you haven't unintentionally limited snippets with <code>nosnippet</code>, <code>data-nosnippet</code>, or a very low <code>max-snippet</code> value, because Google applies those same controls to its AI features. If you haven't run one recently, a full <a href="what-is-an-seo-audit.html">SEO audit</a> is the fastest way to surface these gaps in one pass rather than checking each item individually.</p>
 
   <h2>Track and Measure Your AI Overview Visibility</h2>
-  <p>AI Overviews don't come with a dashboard of their own, and Google doesn't notify you when your content gets cited in one, but tracking progress isn't impossible. Google has been rolling out reporting in Search Console that separates AI Overview impressions and clicks from standard search results. Filter by "search appearance" and look specifically for AI Overview data. A low click-through rate alongside rising impressions isn't a failure signal; it often just reflects how AI Overviews are designed to work, answering the query directly on the results page.</p>
+  <p>AI Overviews don't come with a dashboard of their own, and Google doesn't notify you when your content gets cited in one, but tracking progress isn't impossible. Google counts appearances in AI Overviews and AI Mode within Search Console's overall Web search data rather than reporting them separately, so there's no dedicated AI Overview filter. Instead, watch impressions and clicks for the specific queries and pages you're targeting. A low click-through rate alongside rising impressions isn't necessarily a failure signal; when a query shows an AI Overview, some searchers get what they need without clicking.</p>
   <p>Pair that with third-party SEO tools that track AI Overview presence, manual searches of your own target queries in a logged-out browser session, and a look at what happens after a citation does produce a click. Look at the combination of signals together over weeks, not a single clean number or a single day's snapshot.</p>
 
   <img src="../assets/images/blog/ai-overview-tracking-signals-framework.png" alt="Framework showing three signals to combine when measuring AI Overview visibility: Search Console impressions, third-party tool citation frequency, and referral analytics engagement" loading="lazy" width="3320" height="1720" />
 
   <h2>Conclusion</h2>
   <p>Getting your content into Google AI Overviews isn't about gaming a single ranking factor; it's about making your site easier for both AI systems and human readers to understand, trust, and cite. Clear, well-structured answers give AI systems something extractable. Topical authority and internal linking show your coverage runs deep.</p>
-  <p>Conversational phrasing matches how people actually ask questions. E-E-A-T signals, structured data, and technical SEO fundamentals reinforce credibility. And because AI Overviews draw on sources beyond your own site, being mentioned and cited elsewhere matters just as much as what you publish yourself.</p>
+  <p>Conversational phrasing matches how people actually ask questions. E-E-A-T signals, structured data, and technical SEO fundamentals reinforce credibility. And because credibility is judged beyond your own site, being mentioned and cited elsewhere can matter too.</p>
   <p>None of this guarantees a spot in any given AI Overview. Google's selection process depends on many factors outside any site owner's control. What you can control is the quality, clarity, and trustworthiness of what you publish. Pick one piece of high-value content, restructure it around a clear, direct answer near the top, add relevant schema markup, and use that as your template for the rest of the site.</p>
   <p><strong>Not sure where to start, or don't have the time to work through this yourself?</strong> <a href="../contact/">Get in touch</a> and we'll take a look at what's actually holding your content back.</p>
 
   <h2>Frequently Asked Questions</h2>
 
-  <h3>Why would a page appear correctly in search results but still get skipped by an AI Overview?</h3>
-  <p>The answer, even if present, may be buried in dense paragraphs or not stated plainly near the top of the relevant section, making it hard for the AI system to extract cleanly. Competitors who state their answer more directly are more likely to get pulled into the summary instead, even with similar overall page quality.</p>
+  <h3>Can I submit my page to Google AI Overviews?</h3>
+  <p>No. There is no submission process or opt-in. A page must be indexed and eligible to show a snippet in Google Search, and Google then decides which pages to use as supporting links for each AI Overview.</p>
 
-  <h3>Does a low click-through rate alongside rising AI Overview impressions mean my content is underperforming?</h3>
-  <p>Not necessarily. AI Overview appearances often generate strong impressions with comparatively low click-through rates simply because the AI Overview answers the query directly on the results page. Watch for rising impressions over time as the more meaningful signal.</p>
+  <h3>Do I need to rank first to appear in an AI Overview?</h3>
+  <p>Google hasn't published a ranking threshold. Being indexed and eligible to show a snippet is required, and strong organic visibility can help, but Google says AI Overviews can show a wider set of links than the classic results, and a top ranking doesn't guarantee a citation.</p>
+
+  <h3>Why would a page appear correctly in search results but still get skipped by an AI Overview?</h3>
+  <p>Google doesn't explain why a specific page is or isn't cited. One common explanation is that the answer, even if present, is buried in dense paragraphs or not stated plainly near the top of the relevant section. Pages that state their answer more directly may be easier to use in a summary.</p>
+
+  <h3>Does a low click-through rate alongside rising impressions mean my content is underperforming?</h3>
+  <p>Not necessarily. Search Console combines AI Overview appearances with other Web results, so you can't isolate them there, but when a query shows an AI Overview, some searchers get their answer without clicking. Look at impressions and clicks for your target queries over time rather than click-through rate alone.</p>
 
   <h3>How much content do I need to publish before my site has real topical authority?</h3>
   <p>There's no exact quota. Topical authority is built through a pillar page and interlinked subtopic articles that genuinely close coverage gaps: depth and non-redundant coverage matter more than sheer volume.</p>
 
   <h3>Does adding schema markup increase my odds of being cited in an AI Overview?</h3>
-  <p>Not on its own. Schema removes ambiguity about what your content means, which helps, but it works best as a supplement to already clear, well-organized content, not a substitute for it.</p>
+  <p>Not on its own. Google says no special schema is needed for its AI features. Accurate structured data helps Google understand a page, but it supplements clear, well-organized content rather than replacing it.</p>
 
   <h3>Why do mentions on other websites matter if my own page already answers the question well?</h3>
-  <p>Because AI Overviews cross-reference what other sites say about you, not just your own page. If a competitor has credible external mentions and you have none, the model has more material to draw from and more reason to trust their content over yours, even with equally strong on-page content.</p>
+  <p>Google hasn't published how its AI features use external signals, but links and mentions from other sites have long helped search systems judge credibility. A page with no reputation beyond its own site may be at a disadvantage even when its content is strong.</p>
+
+  <h3>Can I keep my content out of AI Overviews?</h3>
+  <p>Yes. Google says the controls that limit snippets in Search, namely nosnippet, data-nosnippet, max-snippet, and noindex, also limit how your content appears in its AI features. Using them can also reduce how your page appears in regular search results.</p>
 
   <div class="author-box">
     <div class="avatar">OK</div>
