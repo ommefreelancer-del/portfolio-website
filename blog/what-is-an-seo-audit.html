@@ -22,6 +22,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.prose .table-wrap { overflow-x: auto; margin: 0 0 24px; }
+.prose .audit-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; color: var(--text-secondary); }
+.prose .audit-table th, .prose .audit-table td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.6; }
+.prose .audit-table th { background: var(--bg); color: var(--secondary); font-weight: 600; }
+.prose .audit-table caption { caption-side: bottom; font-size: 0.85rem; padding-top: 8px; text-align: left; }
+.prose .audit-table th:first-child, .prose .audit-table td:first-child { min-width: 150px; }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,7 +45,7 @@
         "url": "https://ommefreelancer-del.github.io/portfolio-website/"
       },
       "datePublished": "2026-09-09",
-      "dateModified": "2026-09-09",
+      "dateModified": "2026-09-29",
       "mainEntityOfPage": "https://ommefreelancer-del.github.io/portfolio-website/blog/what-is-an-seo-audit.html"
     },
     {
@@ -89,7 +97,7 @@
   <div class="post-meta-row">
         <span class="post-category">SEO Audits</span>
     <span>September 9, 2026</span>
-    <span>17 min read</span>
+    <span>24 min read</span>
   </div>
 
     <h1>What Is an SEO Audit? A Beginner's Guide</h1>
@@ -111,7 +119,7 @@
 <p>None of this means an audit fixes anything on its own -- it's a diagnostic step, not a repair. But without it, SEO work tends to be reactive and scattered rather than deliberate.</p>
 
 <h2>What Does an SEO Audit Check?</h2>
-<p>A thorough audit looks at a website from several angles, since search visibility depends on technical accessibility, on-page relevance, content quality, external signals, site architecture, and -- for many small and local businesses -- local search presence.</p>
+<p>What does an SEO audit include? A thorough audit reviews a website from six angles: technical accessibility (can search engines crawl and index it?), on-page relevance, content quality, external signals such as backlinks, site structure and internal linking, and -- for many small and local businesses -- local search presence. Search visibility depends on all of them, which is why an audit looks at each one rather than a single metric.</p>
 <p>Here's what each area covers and what is included in an SEO audit at a typical level of depth.</p>
 
 <img src="../assets/images/blog/seo-audit-framework-overview.png" alt="Diagram showing the six major areas of an SEO audit -- technical SEO, on-page SEO, content, off-page SEO, site structure and internal links, and local SEO -- arranged around a central &quot;Website&quot; hub." loading="lazy" width="2048" height="1536" />
@@ -129,6 +137,7 @@
 <li><strong>Broken links</strong> -- internal or external links that lead to error pages.</li>
 <li><strong>Page errors</strong> -- server errors, 404s, and other status code issues.</li>
 <li><strong>Website performance</strong> -- page speed, Core Web Vitals, and other factors that affect how quickly and reliably pages load.</li>
+<li><strong>Structured data</strong> -- whether relevant markup (such as Article, Product, or LocalBusiness) is present where it genuinely fits, passes validation in Google's Rich Results Test, matches the content visible on the page, and follows Google's structured data guidelines. Valid markup can make a page eligible for rich results, but Google doesn't guarantee they'll appear, and markup isn't a ranking shortcut.</li>
 </ul>
 <p>This is usually where people ask how to do a technical SEO audit in the first place -- and the honest answer is that it starts with a full crawl of the site (covered in the workflow section below), followed by a systematic review of each of these areas rather than a single check.</p>
 
@@ -187,6 +196,18 @@
 </ul>
 <p>If a business operates nationally or doesn't depend on geographic proximity to customers, local SEO is typically a smaller part of the audit or not applicable at all.</p>
 
+<h2>What Are the Different Types of SEO Audits?</h2>
+<p>Each of the areas above can also be audited on its own, with a narrower scope. You'll often see these described as separate types of SEO audit:</p>
+<ul>
+<li><strong>Technical SEO audit</strong> -- focuses on crawling, indexing, performance, and the other <a href="what-is-technical-seo.html">technical SEO</a> checks above. Often run before or after a migration or redesign.</li>
+<li><strong>On-page SEO audit</strong> -- reviews individual pages' titles, headings, meta descriptions, internal links, and intent alignment. Useful when a few important pages are underperforming.</li>
+<li><strong>Content audit</strong> -- inventories existing content to decide what to keep, update, merge, or remove.</li>
+<li><strong>Off-page or backlink audit</strong> -- reviews the links pointing to a site, often to investigate low-quality links or to understand how the site compares with competitors.</li>
+<li><strong>Local SEO audit</strong> -- focuses on the Google Business Profile, business-information consistency, reviews, and location pages for businesses that serve a specific area.</li>
+<li><strong>Keyword or search-performance audit</strong> -- uses Search Console data to see which queries and pages earn impressions and clicks, and where pages appear for searches they don't fully answer.</li>
+</ul>
+<p>These are related views of the same website, not unrelated exercises. A full SEO audit combines whichever of them are relevant to the site's goals, while a narrower audit is useful when you already know roughly where the problem is.</p>
+
 <h2>How Does an SEO Audit Work?</h2>
 <p>Knowing how to conduct a website audit means understanding the process as a sequence. The steps build on one another rather than happening in a random order. Here's what a typical audit process looks like and why each stage matters.</p>
 
@@ -197,6 +218,7 @@
 
 <h3>2. Crawl and Collect Website Data</h3>
 <p>Most audits start with a crawl. A crawling tool moves through the site in a way that resembles a search engine bot and records pages, links, status codes, and technical attributes. The audit can also use search performance and analytics data to show how the site is performing in search.</p>
+<p>A modern audit may also consider how the site is represented in AI-powered search experiences, such as Google's AI Overviews. Google says these features have no special requirements beyond a page being indexed and eligible to appear with a snippet, and it includes their traffic in Search Console's overall Web performance data. The fundamental checks in this guide therefore remain the foundation; our guide to <a href="google-ai-overviews-seo-strategies.html">showing up in Google AI Overviews</a> covers that topic in more depth.</p>
 
 <h3>3. Review Technical SEO</h3>
 <p>With crawl data in hand, the next step is checking crawlability, indexing status, sitemap accuracy, robots.txt configuration, redirects, broken links, and site performance. The purpose here is to confirm search engines can actually access and process the site correctly -- a prerequisite for everything else.</p>
@@ -222,6 +244,24 @@
 <h3>10. Create an Action Plan</h3>
 <p>Finally, prioritized findings are turned into a practical plan: what needs to be fixed, in what order, and who is responsible. This is the bridge between the audit itself and the implementation work that follows it.</p>
 
+<h2>What Tools Do You Need for an SEO Audit?</h2>
+<p>No single tool is required, and a small site can be audited with free tools alone. Most audits combine a few tools, each suited to a different kind of evidence:</p>
+<div class="table-wrap">
+<table class="audit-table">
+<thead>
+<tr><th>Tool</th><th>Main audit use</th></tr>
+</thead>
+<tbody>
+<tr><td>Google Search Console</td><td>Search performance for your own verified site (queries, impressions, clicks, and average position), indexing status, URL Inspection, and Core Web Vitals data from real visitors</td></tr>
+<tr><td>Google PageSpeed Insights</td><td>Page performance and Core Web Vitals, combining real-user data where available with a lab test of a single page load</td></tr>
+<tr><td>Screaming Frog SEO Spider</td><td>Crawling the site to find status codes, redirects, broken links, missing or duplicate titles and meta descriptions, canonical tags, and internal links</td></tr>
+<tr><td>Ahrefs</td><td>Backlink analysis, competitor context, and estimated search visibility</td></tr>
+<tr><td>Semrush</td><td>Automated site audits, plus keyword, content, and competitor research</td></tr>
+</tbody>
+</table>
+</div>
+<p>Search Console and PageSpeed Insights are free from Google. Third-party tools base their backlink, traffic, and keyword figures on their own data sets, so treat those numbers as estimates rather than a complete picture. Most importantly, tools collect evidence; they don't decide what matters. Interpreting that evidence is the core of the audit.</p>
+
 <h2>What Problems Can an SEO Audit Uncover?</h2>
 <p>Every website is different, so an audit will not uncover the same issues on every site. A well-maintained site may have only a few minor findings, while a site that has not been reviewed for years may have many. Common findings include:</p>
 <ul>
@@ -237,6 +277,25 @@
 <li>Backlink-related concerns, including low-quality or potentially spammy links pointing to the site.</li>
 </ul>
 <p>Finding these issues is the point of the audit. What matters next is figuring out which ones are actually worth addressing first.</p>
+
+<h2>What Does an SEO Audit Report Include?</h2>
+<p>An SEO audit report is the document that records what the audit found and what should happen next. It might be a spreadsheet, a slide deck, or a written document, but a useful report connects each finding to:</p>
+<ul>
+<li><strong>The finding</strong> -- a plain description of the issue.</li>
+<li><strong>Evidence</strong> -- the data behind it, such as a crawl export, a Search Console report, or a screenshot.</li>
+<li><strong>Affected URLs</strong> -- which pages or templates are involved, and how many.</li>
+<li><strong>Context and severity</strong> -- why the issue matters for this particular site.</li>
+<li><strong>Recommended action</strong> -- what should change.</li>
+<li><strong>Priority</strong> -- where it sits in the order of work.</li>
+<li><strong>Owner and status</strong> -- who is responsible and whether it's done, when the report is also used to track work.</li>
+</ul>
+<p>Many reports also open with a short summary of the site's overall condition and the handful of issues that matter most.</p>
+
+<h3>Tool Warnings vs. a Documented Audit</h3>
+<p>Automated tools can generate hundreds of warnings in minutes. That output is useful raw material, but it isn't an audit. A tool flags everything that matches a rule, whether or not it matters -- for example, a "low word count" warning on a contact page that doesn't need more words. A documented audit interprets those warnings: it confirms the important ones, sets aside the irrelevant ones, and explains what to do about the rest and why.</p>
+
+<h3>How to Read an SEO Audit Report</h3>
+<p>Start with the summary and the highest-priority items rather than the full list. For each important finding, check that the evidence supports it and that you understand which pages are affected. Treat anything without evidence or a clear recommended action as a question to ask, not a task to start. Finally, compare the priorities with your own business goals, since the person running the audit may not know which pages matter most to you.</p>
 
 <h2>How Should You Prioritize SEO Audit Findings?</h2>
 <p>A completed audit can produce dozens of findings. Treating every issue as equally urgent is neither realistic nor useful. Prioritization means judging each issue based on several factors:</p>
@@ -258,6 +317,33 @@
 <img src="../assets/images/blog/seo-audit-priority-framework.png" alt="Chart showing how SEO audit findings are grouped into Priority 1, Priority 2, and Priority 3 tiers based on their severity, impact, and effort" loading="lazy" width="1860" height="975" />
 
 <p>This three-tier approach is a practical framework, not a universal scoring formula. Different sites, industries, and business goals will reasonably shift how a given issue gets prioritized, and experienced practitioners often adjust the framework based on context rather than applying it mechanically.</p>
+<p>Here is how that reasoning turns raw audit data into decisions. <strong>Illustrative example -- generic findings, not data from a real website.</strong></p>
+<div class="table-wrap">
+<table class="audit-table">
+<caption>Illustrative example of interpreted audit findings.</caption>
+<thead>
+<tr><th>Finding</th><th>Evidence</th><th>Impact and context</th><th>Recommended action</th><th>Priority</th></tr>
+</thead>
+<tbody>
+<tr><td>Key service pages carry a noindex tag</td><td>Crawl data, confirmed by URL Inspection showing the pages excluded by a noindex tag</td><td>The pages can't appear in search, and they're tied to lead generation</td><td>Remove the tag from the page template, then request indexing</td><td>Priority 1</td></tr>
+<tr><td>A popular guide no longer matches search intent</td><td>Search Console shows impressions for questions the page doesn't answer; current results favor step-by-step guides</td><td>A valuable page with visible demand it isn't fully meeting</td><td>Revise the page to answer those questions directly</td><td>Priority 2</td></tr>
+<tr><td>Blog archive pages share duplicate title tags</td><td>Crawl export lists several archive pages with the same title</td><td>Low-traffic pages; limited effect</td><td>Give them unique titles when the template is next updated</td><td>Priority 3</td></tr>
+<tr><td>Tool warns of "low word count" on the contact page</td><td>Automated crawler warning</td><td>A contact page doesn't need long content, so this isn't a real problem</td><td>No change; mark as reviewed</td><td>None</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>When Should You Run an SEO Audit?</h2>
+<p>An audit is most useful at points where you need an accurate picture of the site, such as:</p>
+<ul>
+<li><strong>Launching a new website</strong> -- ideally before launch, to catch problems like noindex tags left over from a staging site.</li>
+<li><strong>Establishing a baseline</strong> -- before starting ongoing SEO work, so later changes can be measured against it.</li>
+<li><strong>A redesign or migration</strong> -- before and after, since URLs, templates, and redirects all change.</li>
+<li><strong>A significant traffic or ranking change</strong> -- especially one with no obvious explanation.</li>
+<li><strong>Major technical or content changes</strong> -- such as a new CMS, a new site section, or a large content update.</li>
+<li><strong>Recurring maintenance</strong> -- to catch issues that build up gradually as a site grows.</li>
+</ul>
+<p>There's no single correct frequency. The right interval depends on the site's size, how often it changes, its technical complexity, the business context, and how competitive its search space is. A small, rarely updated site may only need an occasional review, while a large site that publishes constantly may need ongoing monitoring with fuller audits in between.</p>
 
 <h2>What Should You Do After an SEO Audit?</h2>
 <p>An audit produces findings -- it doesn't implement them. What comes next typically looks like this:</p>
@@ -285,6 +371,7 @@
 <li>Redirects are clean, without unnecessary chains</li>
 <li>Broken pages and links are identified</li>
 <li>Site performance and Core Web Vitals are reviewed</li>
+<li>Structured data is valid and matches visible content</li>
 </ul>
 
 <h3>On-Page SEO</h3>
@@ -331,13 +418,13 @@
 <p>A typical audit covers <a href="what-is-technical-seo.html">technical SEO</a> (crawling, indexing, site performance, and similar factors), <a href="what-is-on-page-seo.html">on-page SEO</a> (titles, meta descriptions, headings, and alignment with the site's <a href="what-is-keyword-research.html">keyword research</a>), content quality and relevance, off-page factors like backlinks, site structure and internal linking, and local SEO for businesses that serve a specific geographic area.</p>
 
 <h3>How often should a website have an SEO audit?</h3>
-<p>There's no single rule that fits every site. Many businesses run a full audit annually or after major site changes (like a redesign or migration), with lighter check-ins in between. Sites that change frequently or operate in competitive spaces may benefit from more frequent reviews.</p>
+<p>There's no single rule that fits every site. The right interval depends on the site's size, how often it changes, its technical complexity, and how competitive its search space is. An audit is especially useful after major site changes, like a redesign or migration, with lighter check-ins in between. Sites that change frequently or operate in competitive spaces may benefit from more frequent reviews.</p>
 
 <h3>How long does an SEO audit take?</h3>
 <p>It depends heavily on site size and audit depth. A small site might be audited in a few days; a large, complex site can take several weeks, particularly if it includes a detailed content review and competitor analysis.</p>
 
 <h3>Can I perform an SEO audit myself?</h3>
-<p>Yes, especially for smaller sites. Many technical and on-page checks can be done with free or low-cost tools. Larger or more complex sites, or audits requiring deeper backlink and competitive analysis, often benefit from more specialized tools and experience.</p>
+<p>Yes. A small or simple website can often be audited with accessible tools, several of them free, such as Google Search Console, PageSpeed Insights, and a site crawler. Collecting the data is usually the easier part. The harder part is interpreting it: validating which findings are real, understanding which pages matter most, and deciding what deserves attention first. Larger or more complex sites, or audits requiring deeper backlink and competitive analysis, often benefit from more specialized tools and experience.</p>
 
 <h3>What is the difference between an SEO audit and an SEO strategy?</h3>
 <p>An audit is a diagnostic look at where a site currently stands -- what's working, what isn't, and why. An SEO strategy is the forward-looking plan for what to do about it, including priorities, resources, and goals. The audit typically informs the strategy, but the two serve different purposes.</p>

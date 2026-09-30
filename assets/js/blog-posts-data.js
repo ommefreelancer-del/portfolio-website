@@ -23,7 +23,7 @@ const blogPosts = [
     category: "SEO Audits",
     tags: ["seo-audit", "seo-strategy", "website-audit"],
     date: "2026-09-09",
-    readTime: "17 min read"
+    readTime: "24 min read"
   },
   {
     slug: "what-is-guest-posting",
