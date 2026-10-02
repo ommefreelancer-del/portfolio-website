@@ -556,6 +556,9 @@ section {
   line-height: 1.65;
 }
 
+/* Two-column variant (Home core services) */
+.card-grid-2 { grid-template-columns: repeat(2, 1fr); }
+
 /* Why work with me */
 .why-grid {
   display: grid;
@@ -702,8 +705,9 @@ section {
   padding-bottom: 14px;
   border-bottom: 1px solid var(--border);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 4px 10px;
 }
 
 .service-group-title span {
@@ -761,6 +765,25 @@ section {
 .project-card-full p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px; }
 .project-card-full a.project-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; }
 .project-card-full a.project-link:hover { color: var(--secondary); }
+
+/* Status badge + project type label row */
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-bottom: 14px;
+}
+
+.project-meta .project-status { margin-bottom: 0; }
+
+.project-type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
 
 /* Home page teaser sections (condensed cards linking to full pages) */
 .teaser-footer {
@@ -1395,6 +1418,7 @@ footer .social-links a:hover { background: var(--accent); border-color: var(--ac
 }
 
 @media (max-width: 680px) {
+  .card-grid-2 { grid-template-columns: 1fr; }
   .decorative-nodes svg { opacity: 0.3; }
   .decorative-nodes svg.nodes-right { top: 4%; right: -14%; width: 200px; height: 200px; }
   .decorative-nodes svg.nodes-left { bottom: 3%; left: -14%; width: 160px; height: 160px; }
